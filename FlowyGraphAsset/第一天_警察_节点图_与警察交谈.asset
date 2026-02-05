@@ -1,0 +1,791 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c414faa0a0fd26049ba0465c466ee781, type: 3}
+  m_Name: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08"
+  m_EditorClassIdentifier: 
+  nextNodeId: 48
+  version: 1
+  _edgeDataList:
+  - edgeGuid: 30:0-31:0[ed4cd2fd-21fd-4197-ad14-a3feed60fc37]
+    outputNodeGuid: 30
+    outputPortIndex: 0
+    inputNodeGuid: 31
+    inputPortIndex: 0
+    connectionString: 30:0-31:0
+  - edgeGuid: 34:1-30:0[cfe3361f-57e5-4ce0-a624-b0b8477b18d9]
+    outputNodeGuid: 34
+    outputPortIndex: 1
+    inputNodeGuid: 30
+    inputPortIndex: 0
+    connectionString: 34:1-30:0
+  - edgeGuid: 1:0-2:0[ecf7f70a-1749-4ed2-a6cf-70c7680cdd42]
+    outputNodeGuid: 1
+    outputPortIndex: 0
+    inputNodeGuid: 2
+    inputPortIndex: 0
+    connectionString: 1:0-2:0
+  - edgeGuid: 2:1-34:0[d68c1044-dedf-4fa3-bf1b-0ca37bbfd8b1]
+    outputNodeGuid: 2
+    outputPortIndex: 1
+    inputNodeGuid: 34
+    inputPortIndex: 0
+    connectionString: 2:1-34:0
+  - edgeGuid: 17:0-7:0[03587cfa-19b1-4a3e-bdd4-c109370f9a72]
+    outputNodeGuid: 17
+    outputPortIndex: 0
+    inputNodeGuid: 7
+    inputPortIndex: 0
+    connectionString: 17:0-7:0
+  - edgeGuid: 2:0-17:0[91364d9e-a253-4619-8d95-365c189f40c6]
+    outputNodeGuid: 2
+    outputPortIndex: 0
+    inputNodeGuid: 17
+    inputPortIndex: 0
+    connectionString: 2:0-17:0
+  - edgeGuid: 18:0-14:0[6886d5a5-849d-4c62-a3bc-e1c22ef7c165]
+    outputNodeGuid: 18
+    outputPortIndex: 0
+    inputNodeGuid: 14
+    inputPortIndex: 0
+    connectionString: 18:0-14:0
+  - edgeGuid: 13:0-18:0[49b4d136-da4d-45dd-8f5b-38c776e7e81c]
+    outputNodeGuid: 13
+    outputPortIndex: 0
+    inputNodeGuid: 18
+    inputPortIndex: 0
+    connectionString: 13:0-18:0
+  - edgeGuid: 38:0-15:0[aed05177-7ab0-44d5-90b6-cbc3dbeebc05]
+    outputNodeGuid: 38
+    outputPortIndex: 0
+    inputNodeGuid: 15
+    inputPortIndex: 0
+    connectionString: 38:0-15:0
+  - edgeGuid: 31:0-37:0[6d30eb24-52bd-4580-af9e-98f96586316e]
+    outputNodeGuid: 31
+    outputPortIndex: 0
+    inputNodeGuid: 37
+    inputPortIndex: 0
+    connectionString: 31:0-37:0
+  - edgeGuid: 33:0-39:0[be63b1fa-f523-4e38-9d12-94109c505e90]
+    outputNodeGuid: 33
+    outputPortIndex: 0
+    inputNodeGuid: 39
+    inputPortIndex: 0
+    connectionString: 33:0-39:0
+  - edgeGuid: 39:0-40:0[c8d79ba3-a331-42e2-9d1e-40b915f93020]
+    outputNodeGuid: 39
+    outputPortIndex: 0
+    inputNodeGuid: 40
+    inputPortIndex: 0
+    connectionString: 39:0-40:0
+  - edgeGuid: 7:0-5:0[41701600-58cc-4986-a2c2-a6e33308e904]
+    outputNodeGuid: 7
+    outputPortIndex: 0
+    inputNodeGuid: 5
+    inputPortIndex: 0
+    connectionString: 7:0-5:0
+  - edgeGuid: 5:0-8:0[82ddcb7b-d02d-4696-918f-ef6a4e3a401e]
+    outputNodeGuid: 5
+    outputPortIndex: 0
+    inputNodeGuid: 8
+    inputPortIndex: 0
+    connectionString: 5:0-8:0
+  - edgeGuid: 8:0-6:0[4aa8b38a-58d7-4319-83c5-1cdb7d66c612]
+    outputNodeGuid: 8
+    outputPortIndex: 0
+    inputNodeGuid: 6
+    inputPortIndex: 0
+    connectionString: 8:0-6:0
+  - edgeGuid: 6:0-22:0[3c414ede-8bf8-461a-981b-42b499a62b4b]
+    outputNodeGuid: 6
+    outputPortIndex: 0
+    inputNodeGuid: 22
+    inputPortIndex: 0
+    connectionString: 6:0-22:0
+  - edgeGuid: 9:0-10:0[02ac6632-0393-4258-9d73-c0ec4759dd3c]
+    outputNodeGuid: 9
+    outputPortIndex: 0
+    inputNodeGuid: 10
+    inputPortIndex: 0
+    connectionString: 9:0-10:0
+  - edgeGuid: 10:0-11:0[55e4cb00-761d-4796-931c-481a627dae07]
+    outputNodeGuid: 10
+    outputPortIndex: 0
+    inputNodeGuid: 11
+    inputPortIndex: 0
+    connectionString: 10:0-11:0
+  - edgeGuid: 11:0-44:0[62715d75-053b-463d-85dd-782919f36916]
+    outputNodeGuid: 11
+    outputPortIndex: 0
+    inputNodeGuid: 44
+    inputPortIndex: 0
+    connectionString: 11:0-44:0
+  - edgeGuid: 30:1-12:0[d1d30e36-3dee-4ffc-afb8-c6cbc7aebb21]
+    outputNodeGuid: 30
+    outputPortIndex: 1
+    inputNodeGuid: 12
+    inputPortIndex: 0
+    connectionString: 30:1-12:0
+  - edgeGuid: 31:1-12:0[1bf07272-e18a-4a92-b143-c75d761afa08]
+    outputNodeGuid: 31
+    outputPortIndex: 1
+    inputNodeGuid: 12
+    inputPortIndex: 0
+    connectionString: 31:1-12:0
+  - edgeGuid: 34:0-12:0[6f5d916c-9d47-47b4-b0d2-03e69562d5bf]
+    outputNodeGuid: 34
+    outputPortIndex: 0
+    inputNodeGuid: 12
+    inputPortIndex: 0
+    connectionString: 34:0-12:0
+  - edgeGuid: 22:0-21:0[9ed1ed80-ce36-4f9b-903b-491922fc7d3d]
+    outputNodeGuid: 22
+    outputPortIndex: 0
+    inputNodeGuid: 21
+    inputPortIndex: 0
+    connectionString: 22:0-21:0
+  - edgeGuid: 21:0-23:0[63da2137-001d-4388-afb0-1e6b92cb4efe]
+    outputNodeGuid: 21
+    outputPortIndex: 0
+    inputNodeGuid: 23
+    inputPortIndex: 0
+    connectionString: 21:0-23:0
+  - edgeGuid: 23:0-24:0[0020e7b6-0f3d-43e6-b365-16c3885e0819]
+    outputNodeGuid: 23
+    outputPortIndex: 0
+    inputNodeGuid: 24
+    inputPortIndex: 0
+    connectionString: 23:0-24:0
+  - edgeGuid: 24:0-25:0[73dabc7d-b4a2-49bf-83a4-24d4453c3e23]
+    outputNodeGuid: 24
+    outputPortIndex: 0
+    inputNodeGuid: 25
+    inputPortIndex: 0
+    connectionString: 24:0-25:0
+  - edgeGuid: 25:0-26:0[9807f899-e58e-4956-b1b5-50c50511a32f]
+    outputNodeGuid: 25
+    outputPortIndex: 0
+    inputNodeGuid: 26
+    inputPortIndex: 0
+    connectionString: 25:0-26:0
+  - edgeGuid: 26:0-27:0[972d61c8-8ea8-462a-bdbd-07be17f91231]
+    outputNodeGuid: 26
+    outputPortIndex: 0
+    inputNodeGuid: 27
+    inputPortIndex: 0
+    connectionString: 26:0-27:0
+  - edgeGuid: 28:0-9:0[600fe2de-2613-4f2c-a8dd-2cfa1ebc6943]
+    outputNodeGuid: 28
+    outputPortIndex: 0
+    inputNodeGuid: 9
+    inputPortIndex: 0
+    connectionString: 28:0-9:0
+  - edgeGuid: 27:0-28:0[e9e64586-6d4b-4185-855d-cc54112a3bd4]
+    outputNodeGuid: 27
+    outputPortIndex: 0
+    inputNodeGuid: 28
+    inputPortIndex: 0
+    connectionString: 27:0-28:0
+  - edgeGuid: 37:0-32:0[0261447e-6594-483d-91e4-1b8e11de7551]
+    outputNodeGuid: 37
+    outputPortIndex: 0
+    inputNodeGuid: 32
+    inputPortIndex: 0
+    connectionString: 37:0-32:0
+  - edgeGuid: 32:0-35:0[e07a2e81-8547-44d6-8eeb-09a2afd41312]
+    outputNodeGuid: 32
+    outputPortIndex: 0
+    inputNodeGuid: 35
+    inputPortIndex: 0
+    connectionString: 32:0-35:0
+  - edgeGuid: 35:0-33:0[0410819f-d716-4ea1-8464-3e31d2b87a73]
+    outputNodeGuid: 35
+    outputPortIndex: 0
+    inputNodeGuid: 33
+    inputPortIndex: 0
+    connectionString: 35:0-33:0
+  - edgeGuid: 12:0-36:0[aba671d4-9678-4a4a-b8c2-674e744355e4]
+    outputNodeGuid: 12
+    outputPortIndex: 0
+    inputNodeGuid: 36
+    inputPortIndex: 0
+    connectionString: 12:0-36:0
+  - edgeGuid: 36:0-15:0[c711b6f6-4592-415a-9ad3-feef00884672]
+    outputNodeGuid: 36
+    outputPortIndex: 0
+    inputNodeGuid: 15
+    inputPortIndex: 0
+    connectionString: 36:0-15:0
+  - edgeGuid: 41:0-38:0[c70bb5a0-9ae6-4474-b468-17779356bf61]
+    outputNodeGuid: 41
+    outputPortIndex: 0
+    inputNodeGuid: 38
+    inputPortIndex: 0
+    connectionString: 41:0-38:0
+  - edgeGuid: 40:0-41:0[6b108a84-7ad7-4e8a-a7d2-d870ff0d837e]
+    outputNodeGuid: 40
+    outputPortIndex: 0
+    inputNodeGuid: 41
+    inputPortIndex: 0
+    connectionString: 40:0-41:0
+  - edgeGuid: 44:0-42:0[0b4a612a-916b-4636-bf66-8dcfe1ed1f62]
+    outputNodeGuid: 44
+    outputPortIndex: 0
+    inputNodeGuid: 42
+    inputPortIndex: 0
+    connectionString: 44:0-42:0
+  - edgeGuid: 42:0-43:0[af3b3c43-77a0-4a2e-b17a-0b0129ba51ba]
+    outputNodeGuid: 42
+    outputPortIndex: 0
+    inputNodeGuid: 43
+    inputPortIndex: 0
+    connectionString: 42:0-43:0
+  - edgeGuid: 43:0-13:0[cdeb62a9-122b-4bde-b739-f9753912a6c7]
+    outputNodeGuid: 43
+    outputPortIndex: 0
+    inputNodeGuid: 13
+    inputPortIndex: 0
+    connectionString: 43:0-13:0
+  autoGenNodeDataModule:
+    BranchNodeDataList:
+      list:
+      - NodeId: 2
+        Position: {x: 604, y: 328}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u6CA1\u804A"
+        - portName:
+            key: 
+            text: "\u804A\u8FC7\u4E86"
+        key: {fileID: 11400000, guid: 8c16d6fe8aadc0f44aaf3da20f7c9a45, type: 2}
+    CheckFloatValueNodeDataList:
+      list: []
+    CombineNodeDataList:
+      list: []
+    DelayNodeDataList:
+      list: []
+    EndNodeDataList:
+      list:
+      - NodeId: 14
+        Position: {x: 2489, y: 694}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: End
+        outputPortDataList: []
+      - NodeId: 15
+        Position: {x: 1997, y: 1296}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: End
+        outputPortDataList: []
+    LockNodeDataList:
+      list: []
+    OnlyPassOnceNodeDataList:
+      list: []
+    PassFirstOneNodeDataList:
+      list: []
+    RandomDelayNodeDataList:
+      list: []
+    ResetBranchValueNodeDataList:
+      list: []
+    ResetFloatValueNodeDataList:
+      list: []
+    RunGraphNodeDataList:
+      list: []
+    AddItemNodeDataList:
+      list:
+      - NodeId: 22
+        Position: {x: 891, y: 562}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        item: {fileID: 11400000, guid: 5e9fcc7ec884b6247a29424026c59885, type: 2}
+      - NodeId: 27
+        Position: {x: 1475, y: 95}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        item: {fileID: 11400000, guid: d616059d38415cc4aaf19542fbbd3d34, type: 2}
+      - NodeId: 33
+        Position: {x: 1651, y: 1011}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        item: {fileID: 11400000, guid: b7d79c3e075d8254f92ea9950f486750, type: 2}
+    CameraFocusCancelNodeDataList:
+      list:
+      - NodeId: 18
+        Position: {x: 2489, y: 616}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+      - NodeId: 38
+        Position: {x: 1997, y: 1218}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+    CameraFocusNodeDataList:
+      list:
+      - NodeId: 17
+        Position: {x: 891, y: -106}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        zoomMultiplier: 1
+      - NodeId: 37
+        Position: {x: 1383, y: 859}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        zoomMultiplier: 1
+    CharacterMoveNodeDataList:
+      list: []
+    CharacterVisualStateNodeDataList:
+      list:
+      - NodeId: 39
+        Position: {x: 1961, y: 761}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: d06ec2ba15f88594498ea0f14d5f96c0, type: 2}
+        isVisible: 1
+      - NodeId: 40
+        Position: {x: 1961, y: 891}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 813bc60f01f322749b5f371f576bd372, type: 2}
+        isVisible: 1
+      - NodeId: 42
+        Position: {x: 2239, y: 190}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: a6110952fde3c8844a9e7cfaf2fa00d5, type: 2}
+        isVisible: 1
+      - NodeId: 43
+        Position: {x: 2239, y: 305}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 53931af5d8a84db44bf937fec46c8e79, type: 2}
+        isVisible: 1
+      - NodeId: 44
+        Position: {x: 2239, y: 75}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: ef6940d3db1f263498c9695389683474, type: 2}
+        isVisible: 1
+    CheckItemNodeDataList:
+      list:
+      - NodeId: 30
+        Position: {x: 869, y: 987}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: Have
+        - portName:
+            key: 
+            text: Not Have
+        item: {fileID: 11400000, guid: 6960c713761ee8644bdfe39aa44c2500, type: 2}
+      - NodeId: 31
+        Position: {x: 1119, y: 987}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: Have
+        - portName:
+            key: 
+            text: Not Have
+        item: {fileID: 11400000, guid: 1f33e5c08ffdd7649884a0d4d305d300, type: 2}
+      - NodeId: 34
+        Position: {x: 588, y: 1102}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: Have
+        - portName:
+            key: 
+            text: Not Have
+        item: {fileID: 11400000, guid: b7d79c3e075d8254f92ea9950f486750, type: 2}
+    ChooseNodeDataList:
+      list:
+      - NodeId: 7
+        Position: {x: 891, y: 22}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.7.0"
+            text: "\u4ECB\u7ECD\u4E00\u4E0B\u73B0\u5728\u7684\u60C5\u51B5"
+      - NodeId: 8
+        Position: {x: 891, y: 285}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.8.0"
+            text: "\u8FD8\u6709\u6CA1\u6709\u5176\u4ED6\u7EBF\u7D22\uFF1F"
+    DiceCheckNodeDataList:
+      list: []
+    MessageBubbleNodeDataList:
+      list: []
+    MonologueNodeDataList:
+      list:
+      - NodeId: 5
+        Position: {x: 891, y: 121}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.5.0"
+          text: "\u62A5\u6848\u4EBA\u662F\u6668\u8DD1\u6559\u7EC3\uFF0C\u51CC\u66685\u70B9\u53D1\u73B0\u5C38\u4F53\u3002\u6211\u4EEC\u6B63\u5728\u505A\u5468\u8FB9\u8D70\u8BBF\u3002"
+      - NodeId: 6
+        Position: {x: 891, y: 383}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.6.0"
+          text: "\u8D70\u8BBF\u7ED3\u679C\u4E5F\u51FA\u6765\u4E86\u3002\u6709\u76EE\u51FB\u8BC1\u4EBA\u770B\u5230\u6628\u665A11\u70B9\u5DE6\u53F3\uFF0C\u4E00\u5BB6\u4E09\u53E3\u5728\u516C\u56ED\u5357\u4FA7\u5435\u5F97\u5F88\u51F6\u3002"
+      - NodeId: 9
+        Position: {x: 1475, y: 389}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.9.0"
+          text: "\u90A3\u8F86\u8F66\u80FD\u9501\u5B9A\u6765\u6E90\u5417\uFF1F\u8FD9\u9644\u8FD1\u8C01\u6709\u8FD9\u79CD\u53A2\u5F0F\u8D27\u8F66\u3001\u5C24\u5176\u662F\u51B7\u85CF\u8F66\uFF1F"
+      - NodeId: 10
+        Position: {x: 1753, y: -96}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.10.0"
+          text: "\u6211\u4EEC\u67E5\u4E86\u4E00\u4E0B\uFF0C\u516C\u56ED\u9644\u8FD1\u53EA\u6709\u4E00\u5BB6\u4FBF\u5229\u5E97\u6709\u8FD9\u79CD\u53A2\u5F0F\u8D27\u8F66\uFF0C\u662F\u51B7\u85CF\u8F66\u3002"
+      - NodeId: 11
+        Position: {x: 1753, y: 68}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.11.0"
+          text: "\u4FBF\u5229\u5E97\u8001\u677F\u548C\u6628\u665A\u4E0E\u6B7B\u8005\u4E89\u5435\u7684\u7236\u5B50\u5DF2\u7ECF\u5728\u73B0\u573A\u4E86\u3002"
+      - NodeId: 12
+        Position: {x: 1133, y: 1273}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.12.0"
+          text: "\u76EE\u524D\u6CA1\u6709\u76F4\u63A5\u8BC1\u636E\u6307\u5411\u8C01\uFF0C\u53EA\u80FD\u7B49\u66F4\u591A\u7EBF\u7D22\u3002"
+      - NodeId: 21
+        Position: {x: 1186, y: -106}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.21.0"
+          text: "\u6B7B\u8005\u7684\u5BB6\u4EBA\u6628\u665A\u5728\u8FD9\u91CC\u5435\u8FC7\u67B6\u2026\u2026\u8FD9\u5F88\u91CD\u8981\u3002"
+      - NodeId: 23
+        Position: {x: 1186, y: 43}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.23.0"
+          text: "\u201C\u5BB6\u5EAD\u4E89\u5435\u201D\u610F\u5473\u7740\u719F\u4EBA\u4F5C\u6848\u7684\u53EF\u80FD\u6027\u4E0A\u5347\u3002\u9700\u8981\u53BB\u627E\u5BB6\u5C5E\u95EE\u6E05\u5435\u67B6\u5185\u5BB9\u4E0E\u5404\u81EA\u79BB\u5F00\u65F6\u95F4\u3002"
+      - NodeId: 24
+        Position: {x: 1186, y: 231}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.24.0"
+          text: "\u8BC1\u4EBA\u8FD8\u8BF4\uFF0C\u540E\u6765\u770B\u5230\u4E00\u4E2A\u5E74\u8F7B\u7537\u5B69\u8DDF\u90A3\u5973\u7684\u5355\u72EC\u8D70\u5F00\u4E86\u4E00\u6BB5\uFF0C\u4F46\u6700\u540E\u53EA\u6709\u7537\u5B69\u56DE\u5230\u4E86\u90A3\u4E2A\u4E2D\u5E74\u7537\u4EBA\u8EAB\u8FB9\u3002"
+      - NodeId: 25
+        Position: {x: 1186, y: 427}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.25.0"
+          text: "\u73B0\u5728\u770B\u6765\uFF0C\u4ED6\u4EEC\u5355\u72EC\u79BB\u5F00\u8FD9\u6BB5\u65F6\u95F4\u6700\u5BB9\u6613\u51FA\u4E8B\u3002\u8981\u8C03\u67E5\u6E05\u695A\u8FD9\u6BB5\u65F6\u95F4\u53D1\u751F\u4E86\u4EC0\u4E48\u3002"
+      - NodeId: 26
+        Position: {x: 1475, y: -106}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.26.0"
+          text: "\u53E6\u5916\uFF0C\u6709\u4F4F\u6237\u53CD\u6620\u5728\u6DF1\u591C\u770B\u5230\u8FC7\u4E00\u8F86\u53A2\u5F0F\u8D27\u8F66\u505C\u5728\u516C\u56ED\u540E\u95E8\uFF0C\u4F46\u90A3\u4EBA\u8BB0\u4E0D\u6E05\u5177\u4F53\u65F6\u95F4\u4E86\uFF0C\u53EA\u8BF4\u5929\u9ED1\u5F97\u5389\u5BB3\u3002"
+      - NodeId: 28
+        Position: {x: 1475, y: 210}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.28.0"
+          text: "\u6DF1\u591C\u51FA\u73B0\u7684\u8D27\u8F66\u2026\u2026\u867D\u7136\u65F6\u95F4\u6A21\u7CCA\uFF0C\u4F46\u6CD5\u533B\u63A8\u65AD\u7684\u6B7B\u4EA1\u65F6\u95F4\u6BB5\u5C31\u5728\u90A3\u51E0\u4E2A\u5C0F\u65F6\u91CC\u3002"
+      - NodeId: 32
+        Position: {x: 1383, y: 987}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 9479c267efe429940bc9eb09bb24bcc4, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.32.0"
+          text: "\u6211\u8FD9\u8FB9\u6709\u6B7B\u8005\u6307\u7532\u7F1D\u7684\u8F66\u6F06\u6B8B\u7559\uFF0C\u8FD8\u6709\u5979\u624B\u673A\u91CC\u6307\u5411\u738B\u53D1\u7684\u5A01\u80C1\u8349\u7A3F\u3002\u6211\u9700\u8981\u641C\u67E5\u4EE4\u68C0\u6D4B\u4FBF\u5229\u5E97\u8001\u677F\u7684\u8D27\u8F66\u3002"
+      - NodeId: 35
+        Position: {x: 1651, y: 859}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.35.0"
+          text: "\u8BC1\u636E\u94FE\u5B8C\u6574\u4E86\uFF0C\u6211\u4EEC\u53EF\u4EE5\u7533\u8BF7\u641C\u67E5\u4EE4\u53BB\u4FBF\u5229\u5E97\u53D6\u8BC1\u3002\t"
+      - NodeId: 36
+        Position: {x: 1400, y: 1273}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.36.0"
+          text: "\u6709\u65B0\u53D1\u73B0\u518D\u6765\u627E\u6211\u3002"
+      - NodeId: 41
+        Position: {x: 1961, y: 1011}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u4E0E\u8B66\u5BDF\u4EA4\u8C08.41.0"
+          text: "\u6211\u4EEC\u627E\u5230\u4E86\u51B7\u85CF\u8F66\uFF0C\u67E5\u6536\u4E86\u8001\u677F\u624B\u673A\u3002"
+    RemoveItemNodeDataList:
+      list: []
+    SetCharacterNodeDataList:
+      list: []
+    SendSignalNodeDataList:
+      list: []
+    SetBranchValueNodeDataList:
+      list:
+      - NodeId: 13
+        Position: {x: 2489, y: 489}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        selector:
+          _optionsList: {fileID: 11400000, guid: 8c16d6fe8aadc0f44aaf3da20f7c9a45, type: 2}
+          _index: 1
+    SetFloatValueNodeDataList:
+      list: []
+    StartNodeDataList:
+      list:
+      - NodeId: 1
+        Position: {x: 337, y: 328}
+        inputPortDataList: []
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u5F00\u59CB"
+    TimerNodeDataList:
+      list: []
+    WaitAllOverNodeDataList:
+      list: []
+    WaitSignalNodeDataList:
+      list: []
