@@ -33,8 +33,9 @@ public class ChooseManager : MonoBehaviour
             int index = i;
             ChooseButton btn = Instantiate(buttonPrefab, buttonContainer);
             btn.Init(choices[i], () => {
-                onSelected?.Invoke(index);
+                // 先清理旧选项，再触发回调（因为回调可能同步触发新的ShowChoices）
                 HideChoices();
+                onSelected?.Invoke(index);
             });
             activeButtons.Add(btn);
         }

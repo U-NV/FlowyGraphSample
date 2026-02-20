@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3786fe691503f40a095e7555e4e6ae, type: 3}
   m_Name: "\u6CD5\u533B"
   m_EditorClassIdentifier: 
-  name: "\u6CD5\u533B"
+  name: "\u767D\u732B"
   nameColor: {r: 0, g: 0, b: 0, a: 1}

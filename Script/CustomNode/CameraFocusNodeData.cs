@@ -4,8 +4,9 @@ using UnityEngine;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Camera Focus")]
-    [NodeSearchGroup("Custom/Camera")]
+    [NodeName("相机聚焦")]
+    [NodeSearchGroup("自定义/相机")]
+    [NodeIntroduce("将相机镜头对准指定的角色。\n\n输入：开始相机偏移和缩放。\n输出：相机指令发出后立即触发。")]
     [Serializable]
     public class CameraFocusNodeData : BaseNodeData
     {

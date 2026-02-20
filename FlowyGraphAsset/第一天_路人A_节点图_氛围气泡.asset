@@ -51,10 +51,16 @@ MonoBehaviour:
     inputNodeGuid: 2
     inputPortIndex: 0
     connectionString: 8:0-2:0
+  _stickyNoteDataList: []
+  _groupDataList: []
   autoGenNodeDataModule:
+    AddStringValueNodeDataList:
+      list: []
     BranchNodeDataList:
       list: []
     CheckFloatValueNodeDataList:
+      list: []
+    CheckStringValueNodeDataList:
       list: []
     CombineNodeDataList:
       list: []
@@ -63,22 +69,28 @@ MonoBehaviour:
     EndNodeDataList:
       list:
       - NodeId: 4
-        Position: {x: 672.5714, y: 213.14287}
+        Position: {x: 672.5, y: 213}
         inputPortDataList:
         - portName:
             key: 
             text: End
         outputPortDataList: []
+    JumpInputNodeDataList:
+      list: []
+    JumpOutputNodeDataList:
+      list: []
     LockNodeDataList:
       list: []
     OnlyPassOnceNodeDataList:
       list: []
     PassFirstOneNodeDataList:
       list: []
+    PrintNodeDataList:
+      list: []
     RandomDelayNodeDataList:
       list:
       - NodeId: 6
-        Position: {x: 368.00003, y: 314.2857}
+        Position: {x: 368, y: 314.5}
         inputPortDataList:
         - portName:
             key: 
@@ -89,7 +101,7 @@ MonoBehaviour:
             text: 
         delayRange: {x: 1, y: 2}
       - NodeId: 7
-        Position: {x: 368.00003, y: 549.71423}
+        Position: {x: 368, y: 549.5}
         inputPortDataList:
         - portName:
             key: 
@@ -100,7 +112,7 @@ MonoBehaviour:
             text: 
         delayRange: {x: 2, y: 3}
       - NodeId: 8
-        Position: {x: 387.42856, y: 66.85715}
+        Position: {x: 368, y: 69}
         inputPortDataList:
         - portName:
             key: 
@@ -110,6 +122,8 @@ MonoBehaviour:
             key: 
             text: 
         delayRange: {x: 1, y: 2}
+    RemoveStringValueNodeDataList:
+      list: []
     ResetBranchValueNodeDataList:
       list: []
     ResetFloatValueNodeDataList:
@@ -122,20 +136,20 @@ MonoBehaviour:
       list: []
     CameraFocusNodeDataList:
       list: []
-    CharacterMoveNodeDataList:
-      list: []
     CharacterVisualStateNodeDataList:
       list: []
     CheckItemNodeDataList:
       list: []
     ChooseNodeDataList:
       list: []
+    CustomLoopChooseNodeDataList:
+      list: []
     DiceCheckNodeDataList:
       list: []
     MessageBubbleNodeDataList:
       list:
       - NodeId: 2
-        Position: {x: 368.00003, y: 176.57143}
+        Position: {x: 368, y: 176.5}
         inputPortDataList:
         - portName:
             key: 
@@ -147,9 +161,9 @@ MonoBehaviour:
         character: {fileID: 11400000, guid: ea560988f7579f047b57896198726b90, type: 2}
         message:
           key: "\u7B2C\u4E00\u5929_\u8DEF\u4EBAA_\u8282\u70B9\u56FE_\u6C1B\u56F4\u6C14\u6CE1.2.0"
-          text: "\u54CE\u54DF\uFF0C\u8FD9\u5927\u65E9\u4E0A\u7684\uFF0C\u771F\u662F\u6666\u6C14\u2026\u2026"
+          text: "\u54CE\u54DF\uFF0C\u8FD9\u5927\u65E9\u4E0A\u7684\uFF0C\u771F\u662F\u5413\u6B7B\u4EBA\u3002"
       - NodeId: 3
-        Position: {x: 368.00003, y: 412}
+        Position: {x: 368, y: 412}
         inputPortDataList:
         - portName:
             key: 
@@ -161,7 +175,7 @@ MonoBehaviour:
         character: {fileID: 11400000, guid: ea560988f7579f047b57896198726b90, type: 2}
         message:
           key: "\u7B2C\u4E00\u5929_\u8DEF\u4EBAA_\u8282\u70B9\u56FE_\u6C1B\u56F4\u6C14\u6CE1.3.0"
-          text: "\u73B0\u5728\u7684\u5E74\u8F7B\u4EBA\u554A\uFF0C\u5435\u67B6\u90FD\u4E0D\u5206\u573A\u5408\u7684\u3002"
+          text: "\u73B0\u5728\u7684\u5E74\u8F7B\u732B\u554A\uFF0C\u5435\u67B6\u90FD\u4E0D\u5206\u573A\u5408\u7684\u3002"
     MonologueNodeDataList:
       list: []
     RemoveItemNodeDataList:
@@ -177,7 +191,7 @@ MonoBehaviour:
     StartNodeDataList:
       list:
       - NodeId: 1
-        Position: {x: 95.42859, y: 202.28572}
+        Position: {x: 95.5, y: 202.5}
         inputPortDataList: []
         outputPortDataList:
         - portName:

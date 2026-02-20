@@ -12,25 +12,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c414faa0a0fd26049ba0465c466ee781, type: 3}
   m_Name: Empty
   m_EditorClassIdentifier: 
-  nextNodeId: 1
+  nextNodeId: 12
   version: 1
-  _edgeDataList: []
+  _edgeDataList:
+  - edgeGuid: 1:1-2:0[158c5159-0355-49ea-a152-7d3b8f821e3a]
+    outputNodeGuid: 1
+    outputPortIndex: 1
+    inputNodeGuid: 2
+    inputPortIndex: 0
+    connectionString: 1:1-2:0
+  - edgeGuid: 1:2-2:0[2f2003c6-93c0-4cfe-ac6d-9090a673dfd5]
+    outputNodeGuid: 1
+    outputPortIndex: 2
+    inputNodeGuid: 2
+    inputPortIndex: 0
+    connectionString: 1:2-2:0
+  - edgeGuid: 1:3-2:0[65bbff78-a10f-4bea-88d5-5997ca8f6c2c]
+    outputNodeGuid: 1
+    outputPortIndex: 3
+    inputNodeGuid: 2
+    inputPortIndex: 0
+    connectionString: 1:3-2:0
+  - edgeGuid: 3:0-1:1[a173e6cf-3f3d-43e4-a3f8-b0da684749d2]
+    outputNodeGuid: 3
+    outputPortIndex: 0
+    inputNodeGuid: 1
+    inputPortIndex: 1
+    connectionString: 3:0-1:1
+  - edgeGuid: 8:0-9:0[5b3bccb3-288a-4bc0-934e-72f2709de840]
+    outputNodeGuid: 8
+    outputPortIndex: 0
+    inputNodeGuid: 9
+    inputPortIndex: 0
+    connectionString: 8:0-9:0
+  - edgeGuid: 9:0-10:0[3741821d-7f98-44df-9ea2-d3378cad3827]
+    outputNodeGuid: 9
+    outputPortIndex: 0
+    inputNodeGuid: 10
+    inputPortIndex: 0
+    connectionString: 9:0-10:0
+  - edgeGuid: 10:0-11:0[e1e4a371-fe07-40cc-aa46-bfe698c3af8f]
+    outputNodeGuid: 10
+    outputPortIndex: 0
+    inputNodeGuid: 11
+    inputPortIndex: 0
+    connectionString: 10:0-11:0
+  _stickyNoteDataList: []
+  _groupDataList: []
   autoGenNodeDataModule:
+    AddStringValueNodeDataList:
+      list: []
     BranchNodeDataList:
       list: []
     CheckFloatValueNodeDataList:
+      list: []
+    CheckStringValueNodeDataList:
       list: []
     CombineNodeDataList:
       list: []
     DelayNodeDataList:
       list: []
     EndNodeDataList:
+      list:
+      - NodeId: 11
+        Position: {x: 738, y: 361}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: "\u7ED3\u675F"
+        outputPortDataList: []
+    JumpInputNodeDataList:
+      list: []
+    JumpOutputNodeDataList:
       list: []
     LockNodeDataList:
       list: []
     OnlyPassOnceNodeDataList:
       list: []
     PassFirstOneNodeDataList:
+      list: []
+    PrintNodeDataList:
+      list: []
+    RandomDelayNodeDataList:
+      list: []
+    RemoveStringValueNodeDataList:
       list: []
     ResetBranchValueNodeDataList:
       list: []
@@ -44,20 +109,34 @@ MonoBehaviour:
       list: []
     CameraFocusNodeDataList:
       list: []
-    CharacterMoveNodeDataList:
-      list: []
     CharacterVisualStateNodeDataList:
       list: []
     CheckItemNodeDataList:
       list: []
     ChooseNodeDataList:
       list: []
+    CustomLoopChooseNodeDataList:
+      list: []
     DiceCheckNodeDataList:
       list: []
     MessageBubbleNodeDataList:
       list: []
     MonologueNodeDataList:
-      list: []
+      list:
+      - NodeId: 10
+        Position: {x: 452, y: 352}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 9479c267efe429940bc9eb09bb24bcc4, type: 2}
+        content:
+          key: 
+          text: 
     RemoveItemNodeDataList:
       list: []
     SetCharacterNodeDataList:
@@ -69,10 +148,30 @@ MonoBehaviour:
     SetFloatValueNodeDataList:
       list: []
     StartNodeDataList:
-      list: []
+      list:
+      - NodeId: 8
+        Position: {x: 184, y: 209}
+        inputPortDataList: []
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u5F00\u59CB"
     TimerNodeDataList:
       list: []
     WaitAllOverNodeDataList:
       list: []
     WaitSignalNodeDataList:
-      list: []
+      list:
+      - NodeId: 9
+        Position: {x: 452, y: 209}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        signal:
+          _optionsList: {fileID: 11400000, guid: 55ff563c6a509794d8999a849bdfb711, type: 2}
+          _index: 0

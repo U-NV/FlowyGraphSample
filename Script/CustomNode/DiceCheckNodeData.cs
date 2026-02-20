@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Dice Check")]
-    [NodeSearchGroup("Custom/Check")]
+    [NodeName("骰子检定")]
+    [NodeSearchGroup("自定义/检定")]
     [NodePortEdit(canEditorOutputPortText: false)]
+    [NodeIntroduce("进行一次基于角色属性的 1d20 骰子检定。\n\n输入：发起检定请求并显示 UI。\n输出：\n- 成功：骰子结果 + 属性值 >= 难度时触发。\n- 失败：检定未通过时触发。")]
     [Serializable]
     public class DiceCheckNodeData : BaseNodeData
     {

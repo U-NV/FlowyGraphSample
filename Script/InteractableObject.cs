@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [Header("Position")]
+    [SerializeField] private Transform interactiveIconAnchor;
+    public Transform InteractiveIconAnchor => interactiveIconAnchor;
+    
+    [Header("Graphs")]
     [SerializeField] private FlowyGraphAsset dialogueGraph;
-    [SerializeField] private FlowyGraphAsset approachGraph;
-    [SerializeField] private FlowyGraphAsset leaveGraph;
     [SerializeField] private FlowyGraphAsset idleGraph;
-    [SerializeField] private SignalOption signalToEmit;
+    [SerializeField] private OptionsSelector<SignalOption> signalToEmit;
     [SerializeField] private bool isEnabled = true;
     [SerializeField] private bool allowRepeat = true;
-    [SerializeField] private bool allowApproachRepeat = true;
-    [SerializeField] private bool allowLeaveRepeat = true;
     [SerializeField] private bool allowIdleRepeat = true;
 
     private FlowyGraphRuntime runtime;
@@ -85,7 +86,7 @@ public class InteractableObject : MonoBehaviour
         var started = TryPlayGraph(GraphType.Interact, dialogueGraph, allowRepeat);
         if (started && signalToEmit != null)
         {
-            FlowyGraphSystem.EmitSignal(signalToEmit, 0);
+            FlowyGraphSystem.EmitSignal(signalToEmit.Options, signalToEmit.Index);
         }
     }
 
@@ -129,15 +130,6 @@ public class InteractableObject : MonoBehaviour
         if (currentGraphType == GraphType.Interact)
         {
             return;
-        }
-
-        if (isInRange && !wasInRange)
-        {
-            TryPlayGraph(GraphType.Approach, approachGraph, allowApproachRepeat);
-        }
-        else if (!isInRange && wasInRange)
-        {
-            TryPlayGraph(GraphType.Leave, leaveGraph, allowLeaveRepeat);
         }
 
         if (!isSelected && wasSelected)

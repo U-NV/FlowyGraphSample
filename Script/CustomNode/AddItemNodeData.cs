@@ -4,8 +4,9 @@ using FlowyGraph;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Add Item")]
-    [NodeSearchGroup("Custom/Item")]
+    [NodeName("添加道具")]
+    [NodeSearchGroup("自定义/道具")]
+    [NodeIntroduce("向玩家背包中添加指定的道具。\n\n输入：进入该节点时执行添加逻辑。\n输出：添加完成后立即触发。")]
     [Serializable]
     public class AddItemNodeData : BaseNodeData
     {

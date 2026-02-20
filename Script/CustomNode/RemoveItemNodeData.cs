@@ -4,8 +4,9 @@ using FlowyGraph;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Remove Item")]
-    [NodeSearchGroup("Custom/Item")]
+    [NodeName("移除道具")]
+    [NodeSearchGroup("自定义/道具")]
+    [NodeIntroduce("从玩家背包中移除指定的道具。\n\n输入：执行移除逻辑。\n输出：移除完成后立即触发。")]
     [Serializable]
     public class RemoveItemNodeData : BaseNodeData
     {

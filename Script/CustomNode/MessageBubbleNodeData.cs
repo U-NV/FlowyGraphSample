@@ -4,8 +4,9 @@ using FlowyGraph;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Message Bubble")]
-    [NodeSearchGroup("Custom")]
+    [NodeName("消息气泡")]
+    [NodeSearchGroup("自定义")]
+    [NodeIntroduce("在角色头顶显示一个简短的消息气泡。\n\n输入：显示气泡并等待玩家点击或超时。\n输出：气泡消失后继续流程。")]
     [Serializable]
     public class MessageBubbleNodeData : BaseNodeData
     {

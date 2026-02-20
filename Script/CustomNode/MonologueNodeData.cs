@@ -4,8 +4,9 @@ using FlowyGraph;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Monologue")]
-    [NodeSearchGroup("Custom")]
+    [NodeName("独白")]
+    [NodeSearchGroup("自定义")]
+    [NodeIntroduce("显示角色的内心独白或旁白文本。\n\n输入：显示独白界面。\n输出：玩家点击继续后触发，并开始关闭界面。")]
     [Serializable]
     public class MonologueNodeData : BaseNodeData
     {

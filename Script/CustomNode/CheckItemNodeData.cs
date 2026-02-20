@@ -5,8 +5,9 @@ using FlowyGraph;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Check Item")]
-    [NodeSearchGroup("Custom/Item")]
+    [NodeName("检查道具")]
+    [NodeSearchGroup("自定义/道具")]
+    [NodeIntroduce("检查玩家背包中是否拥有指定的道具。\n\n输入：进入该节点时进行道具检查。\n输出：\n- 拥有：玩家拥有该道具时触发。\n- 未拥有：玩家不拥有该道具时触发。")]
     [Serializable]
     public class CheckItemNodeData : BaseNodeData
     {
@@ -20,8 +21,8 @@ namespace FlowyGraph.Sample
             };
             outputPortDataList = new List<NodeOutputData>
             {
-                new NodeOutputData("Have"),
-                new NodeOutputData("Not Have")
+                new NodeOutputData("拥有"),
+                new NodeOutputData("未拥有")
             };
         }
 

@@ -4,8 +4,9 @@ using UnityEngine;
 
 namespace FlowyGraph.Sample
 {
-    [NodeName("Character Visual State")]
-    [NodeSearchGroup("Custom/Character")]
+    [NodeName("角色显示状态")]
+    [NodeSearchGroup("自定义/角色")]
+    [NodeIntroduce("设置角色在场景中的显示或隐藏状态。\n\n输入：修改角色显示状态。\n输出：状态设置后立即触发。")]
     [Serializable]
     public class CharacterVisualStateNodeData : BaseNodeData
     {

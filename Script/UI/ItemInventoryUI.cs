@@ -19,15 +19,10 @@ public class ItemInventoryUI : MonoBehaviour
     {
         BuildIndex();
         SyncWithBlackboard();
-    }
-
-    private void OnEnable()
-    {
         FlowyGraphBlackboard.RegisterClass(this);
-        SyncWithBlackboard();
     }
-
-    private void OnDisable()
+    
+    private void OnDestroy()
     {
         FlowyGraphBlackboard.UnregisterClass(this);
     }

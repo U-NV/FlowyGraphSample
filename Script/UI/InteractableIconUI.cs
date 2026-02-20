@@ -5,13 +5,12 @@ public class InteractableIconUI : MonoBehaviour
 {
     [SerializeField] private RectTransform iconRect;
     [SerializeField] private Image iconImage;
-    [SerializeField] private Sprite defaultIcon;
-    [SerializeField] private Sprite hoverIcon;
     [SerializeField] private Vector3 worldOffset = new Vector3(0f, 2f, 0f);
     [SerializeField] private Button button;
     private InteractableObject target;
     private Camera worldCamera;
     private bool canInteract;
+    private bool isVisible;
 
     private void Awake()
     {
@@ -27,6 +26,13 @@ public class InteractableIconUI : MonoBehaviour
         target = newTarget;
         worldCamera = newCamera;
         canInteract = false;
+        isVisible = false;
+    }
+
+    public void SetState(bool isVisible, bool isInteractable)
+    {
+        this.isVisible = isVisible;
+        this.canInteract = isInteractable;
     }
 
     public void SetInteractableState(bool isInteractable)
@@ -51,13 +57,12 @@ public class InteractableIconUI : MonoBehaviour
             return;
         }
 
-        var screenPos = worldCamera.WorldToScreenPoint(target.transform.position + worldOffset);
+        var screenPos = worldCamera.WorldToScreenPoint(target.InteractiveIconAnchor.position + worldOffset);
         iconRect.position = screenPos;
 
-        if (iconImage != null && hoverIcon != null && defaultIcon != null)
-        {
-            iconImage.sprite = canInteract ? hoverIcon : defaultIcon;
-        }
+
+        iconImage.gameObject.SetActive(isVisible);
+        
 
         if (button != null)
         {

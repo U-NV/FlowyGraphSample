@@ -7,7 +7,8 @@ public class InteractableIconManager : MonoBehaviour
     [SerializeField] private RectTransform iconRoot;
     [SerializeField] private Camera worldCamera;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private float interactionRadius = 2.5f;
+    [SerializeField] private float interactionRadius = 1.0f;
+    [SerializeField] private float showIconRadius = 2.5f;
 
     private readonly Dictionary<InteractableObject, InteractableIconUI> icons = new();
     private bool isFocused;
@@ -69,50 +70,42 @@ public class InteractableIconManager : MonoBehaviour
 
             if (isFocused || !target.IsEnabled)
             {
-                icon.gameObject.SetActive(false);
-                continue;
-            }
-
-            if (!icon.gameObject.activeSelf)
-            {
-                icon.gameObject.SetActive(true);
-            }
-
-            var distance = Vector3.Distance(playerTransform.position, target.transform.position);
-            if (distance <= interactionRadius && distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestIcon = icon;
-            }
-        }
-
-        foreach (var pair in icons)
-        {
-            var icon = pair.Value;
-            if (icon == null)
-            {
-                continue;
-            }
-
-            var target = pair.Key;
-            if (target == null)
-            {
-                continue;
-            }
-
-            if (isFocused || !target.IsEnabled)
-            {
-                icon.SetInteractableState(false);
+                icon.SetState(false, false);
                 target.UpdateInteractionState(false, false);
                 continue;
             }
 
             var distance = Vector3.Distance(playerTransform.position, target.transform.position);
+            
+            var isVisible = distance <= showIconRadius;
             var isInRange = distance <= interactionRadius;
-            var isSelected = isInRange && icon == closestIcon;
+            
+            if (isInRange && distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestIcon = icon;
+            }
+            
+            // 初始设置，后面会根据是否是最近的来更新交互状态
+            icon.SetState(isVisible, false);
+            target.UpdateInteractionState(isInRange, false);
+        }
 
-            icon.SetInteractableState(isSelected);
-            target.UpdateInteractionState(isInRange, isSelected);
+        if (closestIcon != null)
+        {
+            // 找到最近的图标，设置其为可交互
+            foreach (var pair in icons)
+            {
+                if (pair.Value == closestIcon)
+                {
+                    var target = pair.Key;
+                    var distance = Vector3.Distance(playerTransform.position, target.transform.position);
+                    var isVisible = distance <= showIconRadius;
+                    closestIcon.SetState(isVisible, true);
+                    target.UpdateInteractionState(true, true);
+                    break;
+                }
+            }
         }
     }
 
@@ -127,7 +120,10 @@ public class InteractableIconManager : MonoBehaviour
             }
             var target = pair.Key;
             var shouldShow = !isFocused && target != null && target.IsEnabled;
-            pair.Value.gameObject.SetActive(shouldShow);
+            if (!shouldShow)
+            {
+                pair.Value.SetState(false, false);
+            }
         }
     }
 
