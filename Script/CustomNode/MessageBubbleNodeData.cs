@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using FlowyGraph;
+using U0UGames.Localization;
 
 namespace FlowyGraph.Sample
 {
@@ -29,7 +30,7 @@ namespace FlowyGraph.Sample
 
                 string messageText = message.Text ?? "";;
 
-                manager.ShowMessage(character, messageText, () => {
+                manager.ShowMessage(character, new LocalizeString(message.Key), () => {
                     MoveToNext();
                 });
             }

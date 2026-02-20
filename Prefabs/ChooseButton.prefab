@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1595884658572865383}
-  text: {fileID: 2064115137930648726}
+  text: {fileID: 4601026667071250455}
 --- !u!222 &8431549749863288154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3096329032931839222}
   - component: {fileID: 8957243405445079823}
   - component: {fileID: 2064115137930648726}
+  - component: {fileID: 4601026667071250455}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -270,3 +271,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4601026667071250455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278014845621839041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dda02d00b79a54cb8e1faea21aa069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 2064115137930648726}
+  localizeData:
+    lKey: 
+    lValue: 

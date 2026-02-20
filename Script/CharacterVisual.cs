@@ -1,9 +1,10 @@
 using TMPro;
+using U0UGames.Localization.UI;
 using UnityEngine;
 public class CharacterVisual : MonoBehaviour
 {
     [SerializeField] private CharacterData characterData;
-    [SerializeField] private TMP_Text nameText;
+    [SerializeField] private LocalizeText nameText;
     [SerializeField] private Transform messageBubbleAnchor;
 
     [SerializeField] private GameObject visualRoot;
@@ -14,12 +15,12 @@ public class CharacterVisual : MonoBehaviour
     public CharacterData CharacterData => characterData;
     public Transform MessageBubbleAnchor => messageBubbleAnchor;
     public bool IsVisible => isVisible;
-    public string SaveId => characterData != null ? characterData.name : name;
+    public string SaveId => characterData != null ? characterData.nameLocalizeData.LocalizeKey : name;
 
     private void Awake(){
         if (nameText != null && characterData != null)
         {
-            nameText.text = characterData.name;
+            nameText.text = characterData.nameLocalizeData.LocalizeString;
         }
     }
 

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784897115c4ad0345ba57f8a909fdca4, type: 3}
   m_Name: "E03 \u6CD5\u533B_\u6307\u7532\u91D1\u5C5E"
   m_EditorClassIdentifier: 
+  key: "E03_\u6CD5\u533B_\u6307\u7532\u91D1\u5C5E_138be8e9"
   itemName: "\u6B7B\u8005\u6307\u7532\u7F1D\u4E2D\u6B8B\u7559\u7070\u8272\u91D1\u5C5E\u6F06"
-  key: "E03 \u6CD5\u533B_\u6307\u7532\u91D1\u5C5E_138be8e9"
+  itemNameLocalizeData:
+    lKey: "Item.Name.E03_\u6CD5\u533B_\u6307\u7532\u91D1\u5C5E"
+    lValue: "\u6B7B\u8005\u6307\u7532\u7F1D\u4E2D\u6B8B\u7559\u7070\u8272\u91D1\u5C5E\u6F06"

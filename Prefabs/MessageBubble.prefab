@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2031310710746284582}
   - component: {fileID: 4830135027143009082}
   - component: {fileID: 6304057222485594591}
+  - component: {fileID: 4842820056672997685}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -134,6 +135,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4842820056672997685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255814090467469203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dda02d00b79a54cb8e1faea21aa069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 6304057222485594591}
+  localizeData:
+    lKey: 
+    lValue: 
 --- !u!1 &1551396362999120389
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368c68e80cc53804da89228555350313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageText: {fileID: 6304057222485594591}
+  messageText: {fileID: 4842820056672997685}
   worldOffset: {x: 0, y: 0.2, z: 0}
   messageAnchor: {fileID: 0}
   secondsPerChar: 0.1

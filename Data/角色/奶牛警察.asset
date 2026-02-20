@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: "\u5976\u725B\u8B66\u5BDF"
   m_EditorClassIdentifier: 
   name: "\u5976\u725B\u8B66\u5BDF"
+  nameLocalizeData:
+    lKey: "Character.Name.\u5976\u725B\u8B66\u5BDF"
+    lValue: "\u5976\u725B\u8B66\u5BDF"
   nameColor: {r: 0, g: 0, b: 0, a: 1}

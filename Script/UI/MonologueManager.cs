@@ -3,17 +3,19 @@ using TMPro;
 using FlowyGraph;
 using System;
 using UnityEngine.UI;
+using U0UGames.Localization;
+using U0UGames.Localization.UI;
 
 public class MonologueManager : MonoBehaviour
 {
     [SerializeField] private GameObject monologuePanel;
     [SerializeField] private Button bgButton;
 
-    [SerializeField] private TMP_Text characterNameText;
+    [SerializeField] private LocalizeText characterNameText;
     [SerializeField] private GameObject characterNameRoot;
 
 
-    [SerializeField] private TMP_Text contentText;
+    [SerializeField] private LocalizeText contentText;
 
     [SerializeField] private float closeDelay = 0.02f;
 
@@ -38,13 +40,13 @@ public class MonologueManager : MonoBehaviour
 
     private float closeTimer = 0.0f;
     private bool isCloseing = false;
-    public void ShowMonologue(CharacterData character, string content, Action onNext)
+    public void ShowMonologue(CharacterData character, LocalizeString content, Action onNext)
     {
         closeTimer = 0.0f;
         isCloseing = false;
 
         if(character!=null){
-            characterNameText.text = character.name;
+            characterNameText.text = character.nameLocalizeData.LocalizeString;
             characterNameText.color = character.nameColor;
         }
         characterNameRoot.SetActive(character!=null);

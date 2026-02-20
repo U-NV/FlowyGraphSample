@@ -1,4 +1,8 @@
 using UnityEngine;
+using System.ComponentModel;
+using U0UGames.Localization;
+
+
 #if UNITY_EDITOR
 using System.IO;
 using System.Security.Cryptography;
@@ -9,10 +13,19 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "ItemData", menuName = "FlowyGraphSample/ItemData", order = 2)]
 public class ItemData : ScriptableObject
 {
-    public string itemName;
 
-    [SerializeField] private string key;
-    public string Key => string.IsNullOrEmpty(key) ? itemName : key;
+    [SerializeField] [ReadOnly(true)] private string key;
+    public string Key => string.IsNullOrEmpty(key) ? name : key;
+    // public string itemName;
+    public LocalizeData itemNameLocalizeData;
+
+    // [ContextMenu("UpdateLocalizeData")]
+    // public void UpdateLocalizeData()
+    // {
+    //     var key = $"Item.Name.{name}";
+    //     key = key.Replace(" ", "_");
+    //     itemNameLocalizeData = new LocalizeData(key, itemName);
+    // }
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -25,10 +38,10 @@ public class ItemData : ScriptableObject
         var assetPath = AssetDatabase.GetAssetPath(this);
         if (string.IsNullOrEmpty(assetPath))
         {
-            return itemName;
+            return name?.Replace(" ", "_");
         }
 
-        var fileName = Path.GetFileNameWithoutExtension(assetPath);
+        var fileName = Path.GetFileNameWithoutExtension(assetPath).Replace(" ", "_");
         var hash = GetShortHash(assetPath);
         return $"{fileName}_{hash}";
     }

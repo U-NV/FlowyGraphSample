@@ -1,19 +1,20 @@
 using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using FlowyGraph;
+using U0UGames.Localization;
+using U0UGames.Localization.UI;
 
 public class ItemInventoryUI : MonoBehaviour
 {
     [SerializeField] private GameObject root;
-    [SerializeField] private TMP_Text itemListText;
-    [SerializeField] private string emptyText = "暂无线索";
-    [SerializeField] private string linePrefix = "- ";
+    [SerializeField] private GameObject itemTextPrefab;
+    [SerializeField] private LocalizeData emptyText = new LocalizeData("UI.Item.NoneTips","暂无线索");
     [SerializeField] private List<ItemData> items = new List<ItemData>();
 
-    private readonly Dictionary<string, string> keyToName = new Dictionary<string, string>();
+    private readonly Dictionary<string, ItemData> keyToItemData = new Dictionary<string, ItemData>();
     private readonly List<string> activeKeys = new List<string>();
+    private readonly List<GameObject> spawnedItems = new List<GameObject>();
 
     private void Awake()
     {
@@ -21,7 +22,7 @@ public class ItemInventoryUI : MonoBehaviour
         SyncWithBlackboard();
         FlowyGraphBlackboard.RegisterClass(this);
     }
-    
+
     private void OnDestroy()
     {
         FlowyGraphBlackboard.UnregisterClass(this);
@@ -29,15 +30,14 @@ public class ItemInventoryUI : MonoBehaviour
 
     private void BuildIndex()
     {
-        keyToName.Clear();
+        keyToItemData.Clear();
         foreach (var item in items)
         {
             if (item == null || string.IsNullOrEmpty(item.Key))
             {
                 continue;
             }
-            var displayName = string.IsNullOrEmpty(item.itemName) ? item.name : item.itemName;
-            keyToName[item.Key] = displayName;
+            keyToItemData[item.Key] = item;
         }
     }
 
@@ -47,7 +47,7 @@ public class ItemInventoryUI : MonoBehaviour
         var values = FlowyGraphBlackboard.GetStringValues();
         if (values == null)
         {
-            UpdateText();
+            UpdateUI();
             return;
         }
 
@@ -58,7 +58,7 @@ public class ItemInventoryUI : MonoBehaviour
                 continue;
             }
 
-            if (!keyToName.ContainsKey(value))
+            if (!keyToItemData.ContainsKey(value))
             {
                 continue;
             }
@@ -69,7 +69,7 @@ public class ItemInventoryUI : MonoBehaviour
             }
         }
 
-        UpdateText();
+        UpdateUI();
     }
 
     public void HandleItemAdded(string key)
@@ -79,13 +79,13 @@ public class ItemInventoryUI : MonoBehaviour
             return;
         }
 
-        if (!keyToName.ContainsKey(key))
+        if (!keyToItemData.ContainsKey(key))
         {
             return;
         }
 
         activeKeys.Add(key);
-        UpdateText();
+        UpdateUI();
     }
 
     public void HandleItemRemoved(string key)
@@ -97,52 +97,66 @@ public class ItemInventoryUI : MonoBehaviour
 
         if (activeKeys.Remove(key))
         {
-            UpdateText();
+            UpdateUI();
         }
     }
 
-    private void UpdateText()
+    private void UpdateUI()
     {
-        if (root != null)
+        // 清理旧的预制件实例
+        foreach (var obj in spawnedItems)
         {
-            root.SetActive(true);
+            if (obj != null)
+            {
+                Destroy(obj);
+            }
         }
+        spawnedItems.Clear();
 
-        if (itemListText == null)
+        if (root == null || itemTextPrefab == null)
         {
             return;
         }
 
+        // 根据 activeKeys 生成新的预制件
         if (activeKeys.Count == 0)
         {
-            itemListText.text = emptyText;
+            CreateEmptyText();
             return;
         }
 
-        var builder = new StringBuilder();
-        for (var i = 0; i < activeKeys.Count; i++)
+        foreach (var key in activeKeys)
         {
-            if (i > 0)
+            if (keyToItemData.TryGetValue(key, out var itemData))
             {
-                builder.Append('\n');
-            }
-
-            if (!string.IsNullOrEmpty(linePrefix))
-            {
-                builder.Append(linePrefix);
-            }
-
-            var key = activeKeys[i];
-            if (keyToName.TryGetValue(key, out var displayName))
-            {
-                builder.Append(displayName);
-            }
-            else
-            {
-                builder.Append(key);
+                CreateItemText(itemData);
             }
         }
+    }
 
-        itemListText.text = builder.ToString();
+    private void CreateItemText(ItemData item)
+    {
+        var itemInstance = Instantiate(itemTextPrefab, root.transform);
+        spawnedItems.Add(itemInstance);
+        
+        var text = itemInstance.GetComponentInChildren<LocalizeText>();
+        if (text != null)
+        {
+            text.text = item.itemNameLocalizeData.LocalizeString;
+        }
+    }
+
+    private void CreateEmptyText()
+    {
+        if (emptyText == null || string.IsNullOrEmpty(emptyText.LocalizeString.Value)) return;
+
+        var itemInstance = Instantiate(itemTextPrefab, root.transform);
+        spawnedItems.Add(itemInstance);
+
+        var text = itemInstance.GetComponentInChildren<LocalizeText>();
+        if (text != null)
+        {
+            text.text = emptyText.LocalizeString;
+        }
     }
 }

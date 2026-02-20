@@ -2,10 +2,12 @@ using TMPro;
 using UnityEngine;
 using System;
 using System.Collections;
+using U0UGames.Localization.UI;
+using U0UGames.Localization;
 
 public class MessageBubble : MonoBehaviour
 {
-    [SerializeField] private TMP_Text messageText;
+    [SerializeField] private LocalizeText messageText;
     [SerializeField] private Vector3 worldOffset = new Vector3(0f, 0.2f, 0f);
 
     [SerializeField] private Transform messageAnchor;
@@ -32,7 +34,7 @@ public class MessageBubble : MonoBehaviour
         uiCamera = Camera.main;
     }
 
-    public void SetData(CharacterData character, Transform messageBubbleAnchor, string message, Action onAutoHide)
+    public void SetData(CharacterData character, Transform messageBubbleAnchor, LocalizeString message, Action onAutoHide)
     {
         this.character = character;
         messageAnchor = messageBubbleAnchor;
@@ -40,9 +42,9 @@ public class MessageBubble : MonoBehaviour
         UpdateMessage(message);
     }
 
-    public void UpdateMessage(string message)
+    public void UpdateMessage(LocalizeString message)
     {
-        this.message = message;
+        this.message = message.Value;
         messageText.text = message;
         StartAutoHide();
     }

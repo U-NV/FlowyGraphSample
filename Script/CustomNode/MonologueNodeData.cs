@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using FlowyGraph;
+using U0UGames.Localization;
 
 namespace FlowyGraph.Sample
 {
@@ -24,7 +25,7 @@ namespace FlowyGraph.Sample
             var manager = FlowyGraphBlackboard.GetClass<MonologueManager>();
             if (manager != null)
             {
-                manager.ShowMonologue(characterData, content.Text, () => {
+                manager.ShowMonologue(characterData, new LocalizeString(content.Key), () => {
                     MoveToNext();
                 });
             }

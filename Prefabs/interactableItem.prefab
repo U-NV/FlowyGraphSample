@@ -48,14 +48,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactiveIconAnchor: {fileID: 2290967457422651542}
   dialogueGraph: {fileID: 11400000, guid: 99dfdff3406fadd4494a07b74d965d21, type: 2}
-  approachGraph: {fileID: 0}
-  leaveGraph: {fileID: 0}
   idleGraph: {fileID: 0}
-  signalToEmit: {fileID: 0}
+  signalToEmit:
+    _optionsList: {fileID: 0}
+    _index: 0
   isEnabled: 1
   allowRepeat: 1
-  allowApproachRepeat: 1
-  allowLeaveRepeat: 1
   allowIdleRepeat: 1
 --- !u!114 &5019460577669521421
 MonoBehaviour:
@@ -70,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 26e17101ec518cd43952cbe9c63659b5, type: 2}
-  nameText: {fileID: 6132850127486034062}
+  nameText: {fileID: 3866922756717073879}
   messageBubbleAnchor: {fileID: 6889655090565102331}
   visualRoot: {fileID: 3083620292088489959}
   isVisible: 1
@@ -86,7 +84,7 @@ GameObject:
   - component: {fileID: 772600669280055216}
   - component: {fileID: 3205620928533312720}
   - component: {fileID: 6132850127486034062}
-  - component: {fileID: 5597912276312669421}
+  - component: {fileID: 3866922756717073879}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -247,7 +245,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3205620928533312720}
   m_maskType: 0
---- !u!114 &5597912276312669421
+--- !u!114 &3866922756717073879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,9 +254,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2648860579681295881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15848ff3bf20295408eb6ab6bf739584, type: 3}
+  m_Script: {fileID: 11500000, guid: 00dda02d00b79a54cb8e1faea21aa069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _target: {fileID: 6132850127486034062}
+  localizeData:
+    lKey: 
+    lValue: 
 --- !u!1 &2739080426538255636
 GameObject:
   m_ObjectHideFlags: 0

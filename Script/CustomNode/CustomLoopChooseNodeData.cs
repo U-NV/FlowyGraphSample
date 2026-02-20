@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using FlowyGraph;
-
+using U0UGames.Localization;
 namespace FlowyGraph.Sample
 {
     /// <summary>
@@ -25,10 +25,10 @@ namespace FlowyGraph.Sample
             var manager = FlowyGraphBlackboard.GetClass<ChooseManager>();
             if (manager != null)
             {
-                var choiceTexts = new List<string>();
+                var choiceTexts = new List<LocalizeString>();
                 foreach (var choice in choices)
                 {
-                    choiceTexts.Add(choice.Text);
+                    choiceTexts.Add(new LocalizeString(choice.Key));
                 }
                 // ChooseManager 回调传回显示列表中的索引，直接触发对应闭包即可
                 manager.ShowChoices(choiceTexts, (index) =>

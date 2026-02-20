@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using FlowyGraph;
-
+using U0UGames.Localization;
 public class ChooseManager : MonoBehaviour
 {
     [SerializeField] private GameObject choosePanel;
@@ -23,7 +23,7 @@ public class ChooseManager : MonoBehaviour
         FlowyGraphBlackboard.UnregisterClass(this);
     }
 
-    public void ShowChoices(List<string> choices, System.Action<int> onSelected)
+    public void ShowChoices(List<LocalizeString> choices, System.Action<int> onSelected)
     {
         choosePanel.SetActive(true);
         ClearChoices();

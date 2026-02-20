@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using FlowyGraph;
+using U0UGames.Localization;
 
 namespace FlowyGraph.Sample
 {
@@ -19,12 +20,12 @@ namespace FlowyGraph.Sample
             var manager = FlowyGraphBlackboard.GetClass<ChooseManager>();
             if (manager != null)
             {
-                List<string> choices = new List<string>();
+                List<LocalizeString> choices = new List<LocalizeString>();
                 if (outputPortDataList != null)
                 {
                     foreach (var port in outputPortDataList)
                     {
-                        choices.Add(port.PortName.Text);
+                        choices.Add(new LocalizeString(port.PortName.Key));
                     }
                 }
 

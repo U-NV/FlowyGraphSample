@@ -2,6 +2,7 @@ using UnityEngine;
 using FlowyGraph;
 using System;
 using System.Collections.Generic;
+using U0UGames.Localization;
 public class MessageBubbleManager : MonoBehaviour
 {
     [SerializeField] private MessageBubble messageBubblePrefab;
@@ -23,7 +24,7 @@ public class MessageBubbleManager : MonoBehaviour
         FlowyGraphBlackboard.UnregisterClass(this);
     }
 
-    public void ShowMessage(CharacterData character, string message, Action onNext)
+    public void ShowMessage(CharacterData character, LocalizeString message, Action onNext)
     {
         Transform anchor = null;
         var charManager = FlowyGraphBlackboard.GetClass<CharacterVisualManager>();
