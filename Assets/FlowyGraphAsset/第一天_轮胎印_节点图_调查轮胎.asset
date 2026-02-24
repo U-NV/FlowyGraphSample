@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c414faa0a0fd26049ba0465c466ee781, type: 3}
+  m_Name: "\u7B2C\u4E00\u5929_\u8F6E\u80CE\u5370_\u8282\u70B9\u56FE_\u8C03\u67E5\u8F6E\u80CE"
+  m_EditorClassIdentifier: 
+  nextNodeId: 53
+  version: 1
+  _edgeDataList:
+  - edgeGuid: 1:0-3:0[02d3488b-a706-4d51-898f-e9e6ee6c221f]
+    outputNodeGuid: 1
+    outputPortIndex: 0
+    inputNodeGuid: 3
+    inputPortIndex: 0
+    connectionString: 1:0-3:0
+  - edgeGuid: 3:0-52:0[47c24281-e619-48e2-8f7a-f8cb3a90be50]
+    outputNodeGuid: 3
+    outputPortIndex: 0
+    inputNodeGuid: 52
+    inputPortIndex: 0
+    connectionString: 3:0-52:0
+  - edgeGuid: 52:0-17:0[7932704e-47e9-4978-a256-1be678689e7f]
+    outputNodeGuid: 52
+    outputPortIndex: 0
+    inputNodeGuid: 17
+    inputPortIndex: 0
+    connectionString: 52:0-17:0
+  _stickyNoteDataList: []
+  _groupDataList: []
+  autoGenNodeDataModule:
+    AddStringValueNodeDataList:
+      list: []
+    BranchNodeDataList:
+      list: []
+    CheckFloatValueNodeDataList:
+      list: []
+    CheckStringValueNodeDataList:
+      list: []
+    CombineNodeDataList:
+      list: []
+    DelayNodeDataList:
+      list: []
+    EndNodeDataList:
+      list:
+      - NodeId: 17
+        Position: {x: 164, y: 943}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: End
+        outputPortDataList: []
+    JumpInputNodeDataList:
+      list: []
+    JumpOutputNodeDataList:
+      list: []
+    LockNodeDataList:
+      list: []
+    OnlyPassOnceNodeDataList:
+      list: []
+    PassFirstOneNodeDataList:
+      list: []
+    PrintNodeDataList:
+      list: []
+    RandomDelayNodeDataList:
+      list: []
+    RemoveStringValueNodeDataList:
+      list: []
+    ResetBranchValueNodeDataList:
+      list: []
+    ResetFloatValueNodeDataList:
+      list: []
+    RunGraphNodeDataList:
+      list: []
+    AddItemNodeDataList:
+      list: []
+    CameraFocusCancelNodeDataList:
+      list: []
+    CameraFocusNodeDataList:
+      list: []
+    CharacterVisualStateNodeDataList:
+      list: []
+    CheckItemNodeDataList:
+      list: []
+    ChooseNodeDataList:
+      list: []
+    CustomLoopChooseNodeDataList:
+      list: []
+    DiceCheckNodeDataList:
+      list: []
+    MessageBubbleNodeDataList:
+      list: []
+    MonologueNodeDataList:
+      list:
+      - NodeId: 3
+        Position: {x: -147, y: 943}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8F6E\u80CE\u5370_\u8282\u70B9\u56FE_\u8C03\u67E5\u8F6E\u80CE.3.0"
+          text: "\u5C0F\u8DEF\u6CE5\u5730\u4E0A\u6709\u660E\u663E\u7684\u8F6E\u80CE\u538B\u75D5\u3002"
+      - NodeId: 52
+        Position: {x: -147, y: 1089}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 0}
+        content:
+          key: "\u7B2C\u4E00\u5929_\u8F6E\u80CE\u5370_\u8282\u70B9\u56FE_\u8C03\u67E5\u8F6E\u80CE.52.0"
+          text: "\u82B1\u7EB9\u8F83\u5BBD\uFF0C\u5E26\u6709\u8D27\u8F66\u5E38\u89C1\u7684\u53CC\u6392\u523B\u7EB9\u3002"
+    RemoveItemNodeDataList:
+      list: []
+    SetCharacterNodeDataList:
+      list: []
+    SendSignalNodeDataList:
+      list: []
+    SetBranchValueNodeDataList:
+      list: []
+    SetFloatValueNodeDataList:
+      list: []
+    StartNodeDataList:
+      list:
+      - NodeId: 1
+        Position: {x: -447.5, y: 943}
+        inputPortDataList: []
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u5F00\u59CB"
+    TimerNodeDataList:
+      list: []
+    WaitAllOverNodeDataList:
+      list: []
+    WaitSignalNodeDataList:
+      list: []

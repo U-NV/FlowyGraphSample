@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c684616a429bd4fbe8e06b37b32887, type: 3}
+  m_Name: NodeGraphSettings
+  m_EditorClassIdentifier: 
+  nodeDataExportPath: Assets/FlowyGraphSample/Localization
+  autoGenNodeModuleFolder: Assets/FlowyGraphSample/Script
+  nodeColors:
+  - groupName: Start
+    backgroundColor: {r: 0.078431375, g: 0.6039216, b: 0.24313726, a: 1}
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - groupName: End
+    backgroundColor: {r: 0.65882355, g: 0.19607843, b: 0.24705882, a: 1}
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - groupName: Branch
+    backgroundColor: {r: 0.21960786, g: 0.8313726, b: 0.5882353, a: 1}
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+  - groupName: Signal
+    backgroundColor: {r: 0.18, g: 0.48, b: 0.86, a: 1}
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - groupName: BlackboardValue
+    backgroundColor: {r: 0.87, g: 0.56, b: 0.18, a: 1}
+    textColor: {r: 1, g: 1, b: 1, a: 1}

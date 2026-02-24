@@ -1,0 +1,50 @@
+# Unity相关文件夹
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+# 大文件和敏感数据
+/[Mm]emoryCaptures/
+# 仅忽略对应资源的meta数据
+!/[Aa]ssets/**/*.meta
+# 忽略插件和缓存目录
+/[Aa]ssets/Plugins/Editor/JetBrains*
+vs/
+gradle/
+# 忽略自动生成的解决方案和项目文件
+ExportedObj/
+consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+# 忽略Unity生成的meta文件
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+# 忽略崩溃报告文件
+sysinfo.txt
+# 忽略构建文件
+*.apk
+*.aab
+*.unitypackage
+# 忽略Crashlytics生成的文件
+crashlytics-build.properties
+# 忽略打包的Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+# 忽略临时自动生成的Android资源
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
