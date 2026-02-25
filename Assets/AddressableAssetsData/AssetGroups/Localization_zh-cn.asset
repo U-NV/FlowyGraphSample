@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization_zh-cn
+  m_Name: Localization_zh-CN
   m_EditorClassIdentifier: 
-  m_GroupName: Localization_zh-cn
+  m_GroupName: Localization_zh-CN
   m_Data:
     m_SerializedData: []
-  m_GUID: 38c6f62d2493be647a69cbf2cfad314f
+  m_GUID: 432e3b5f973b4e5459054711efa1a05a
   m_SerializeEntries:
   - m_GUID: b99c0199065dbde4ebc6bafc47c5374d
-    m_Address: zh-cn_all
+    m_Address: zh-CN_all
     m_ReadOnly: 0
     m_SerializedLabels:
-    - zh-cn
+    - zh-CN
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 23980cc7c9476614892c5c71a1ae3c28, type: 2}

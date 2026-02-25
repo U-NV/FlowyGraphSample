@@ -14,7 +14,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d71c6dcc003a387284d02562f36d6b8f96c61a50"
+      "hash": "2a3f42beee3213765c75a155f7489e0b8f32bd5d"
     },
     "com.u0ugames.excel-to-scriptableobject": {
       "version": "https://github.com/U-NV/ExcelToScriptableObject.git",
@@ -26,11 +26,11 @@
       "hash": "4aad275d07cd24eedcda0d7029db0a3e18a26c5b"
     },
     "com.u0ugames.flowygraph": {
-      "version": "https://github.com/U-NV/FlowyGraph.git",
+      "version": "https://github.com/U0UGames/FlowyGraph.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f7c200155988d0cd6d21f0f257734f0f65b63f9d"
+      "hash": "8c8e9f44a099b99e061b6d622fb46d0af6ce4d5c"
     },
     "com.u0ugames.localization": {
       "version": "https://github.com/U-NV/Localization.git",
@@ -42,7 +42,7 @@
         "com.u0ugames.excel-data-parser": "https://github.com/U-NV/ExcelDataParser.git",
         "com.u0ugames.excel-to-scriptableobject": "https://github.com/U-NV/ExcelToScriptableObject.git"
       },
-      "hash": "4b40e01f9529c09082fd8b925fca8357c7e33c19"
+      "hash": "f18d31d31bf65a39fe6600c15f86e4dccda7de7d"
     },
     "com.unity.addressables": {
       "version": "1.22.3",

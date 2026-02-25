@@ -12,21 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 326a03264c6c0a14da6c1c02b77ea0aa, type: 3}
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: 
-  _glossary: {fileID: 0}
+  _glossary: {fileID: 11400000, guid: 42f9b32fc53a0ad45aa1f497c27ed2dc, type: 2}
   originalLanguageCodeIndex: 0
   excelDataFolderRootPath: "Assets/Localization/\u539F\u59CB\u6587\u672C"
   translateDataFolderRootPath: "Assets/Localization/\u7FFB\u8BD1\u6587\u672C"
   languageDisplayDataList:
-  - languageCode: zh-cn
-    displayName: "\u7B80\u4F53\u4E2D\u6587"
+  - languageCode: zh-CN
+    displayName: "\u4E2D\u6587"
   - languageCode: en
     displayName: English
   - languageCode: ja
-    displayName: "\u65E5\u672C\u8BED"
+    displayName: "\u65E5\u672C\u8A9E"
+  - languageCode: zh-CHT
+    displayName: "\u7E41\u4F53\u4E2D\u6587"
   inGameLanguageCodeList:
-  - zh-cn
   - en
   - ja
+  - zh-CN
+  - zh-CHT
+  languageCodeAliasList:
+  - fromCode: zh-Hans
+    toCode: zh-CN
+  - fromCode: zh
+    toCode: zh-CN
+  - fromCode: zh-CN
+    toCode: zh-CN
+  - fromCode: zh-SG
+    toCode: zh-CN
+  - fromCode: zh-Hant
+    toCode: zh-CHT
+  - fromCode: zh-HK
+    toCode: zh-CHT
+  - fromCode: zh-MO
+    toCode: zh-CHT
+  - fromCode: zh-TW
+    toCode: zh-CHT
+  - fromCode: zh-CHT
+    toCode: zh-CHT
+  - fromCode: ja
+    toCode: ja
+  - fromCode: ja-JP
+    toCode: ja
+  - fromCode: en
+    toCode: en
+  - fromCode: en-US
+    toCode: en
+  - fromCode: en-GB
+    toCode: en
+  - fromCode: en-AU
+    toCode: en
+  - fromCode: en-CA
+    toCode: en
   translateApiKey: sk-c84f04e6072f424691131c872d3c954c
   translateApiUrl: https://api.deepseek.com
   translateAIPrompt: 
