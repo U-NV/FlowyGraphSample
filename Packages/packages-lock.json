@@ -42,7 +42,7 @@
         "com.u0ugames.excel-data-parser": "https://github.com/U-NV/ExcelDataParser.git",
         "com.u0ugames.excel-to-scriptableobject": "https://github.com/U-NV/ExcelToScriptableObject.git"
       },
-      "hash": "f18d31d31bf65a39fe6600c15f86e4dccda7de7d"
+      "hash": "a8729ad16f7f87b192f98b3b71c0c4efda530d54"
     },
     "com.unity.addressables": {
       "version": "1.22.3",

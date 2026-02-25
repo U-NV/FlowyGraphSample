@@ -33,6 +33,9 @@ namespace FlowyGraph.Sample
 
             var attributeValue = Mathf.RoundToInt(FlowyGraphBlackboard.GetFloatValue(attribute.Options, attribute.Index));
             var manager = FlowyGraphBlackboard.GetClass<DiceCheckManager>();
+
+            // 计算属性调整值
+            attributeValue = Mathf.FloorToInt((attributeValue - 10)/2.0f);
             var request = new DiceCheckRequest
             {
                 attrValue = attributeValue,

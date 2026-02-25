@@ -24,11 +24,11 @@ public class DiceCheckManager : MonoBehaviour
     [SerializeField] private LocalizeText titleText;
     [SerializeField] private LocalizeTextWithArg detailText;
     [SerializeField] private LocalizeData detailTextData = new LocalizeData("UI.Dice.DetailText",
-                "难度: <b>{0}</b>    属性加成: <b>+{1}</b>\n <size=80%>需要 D{2} + {3} ≥ {4}</size>");
+                "难度: <b>{0}</b>    属性加成: <b>+{1}</b>");
     [SerializeField] private LocalizeData rollAnimData = new LocalizeData("UI.Dice.RollAnim",
                 "<size=150%><b>[ {0} ]</b></size>\n D{1}: {0} + 属性: {2} = {3}");
     [SerializeField] private LocalizeData rollResultData = new LocalizeData("UI.Dice.RollResult",
-                "<size=150%><b>[ {0} ]</b></size>\n D{1}: <b>{0}</b> + 属性: <b>{2}</b> = <b>{3}</b>  (难度 {4})\n <size=120%><color={5}><b>— {6} —</b></color></size>");
+                "<size=150%><b>[ {0} ]</b></size>\n <b>{0}</b> + <b>{1}</b> = <b>{2}</b>  \n(难度 {3}) \n<size=120%><color={4}><b>— {5} —</b></color></size>");
     [SerializeField] private LocalizeData successString = new ("UI.Common.Success", "成功");
     [SerializeField] private LocalizeData failureString = new ("UI.Common.Failure", "失败");
     [SerializeField] private LocalizeData rollButtonString = new ("UI.Dice.RollButton", "掷骰");
@@ -138,9 +138,9 @@ public class DiceCheckManager : MonoBehaviour
         {
             () => currentRequest.difficulty,
             () => currentRequest.attrValue,
-            () => diceSides,
-            () => currentRequest.attrValue,
-            () => currentRequest.difficulty
+            // () => diceSides,
+            // () => currentRequest.attrValue,
+            // () => currentRequest.difficulty
         });
     }
 
@@ -208,7 +208,6 @@ public class DiceCheckManager : MonoBehaviour
         detailText.SetArgs(new List<Func<object>>()
         {
             () => lastRoll,
-            () => diceSides,
             () => attrValue,
             () =>lastTotal,
             () => currentRequest.difficulty,
