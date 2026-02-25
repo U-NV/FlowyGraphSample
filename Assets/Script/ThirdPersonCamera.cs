@@ -6,22 +6,35 @@ public interface ICameraFocusController
     void DisableFocus();
 }
 
+[RequireComponent(typeof(Camera))]
 public class ThirdPersonCamera : MonoBehaviour, ICameraFocusController
 {
+
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset = new Vector3(0f, 5f, -6f);
     [SerializeField] private Vector3 focusOffset = new Vector3(0f, 5f, -6f);
-    [SerializeField] private float followSpeed = 8f;
-    [SerializeField] private bool lookAtTarget = true;
     [SerializeField] private float focusZoomMultiplier = 0.7f;
-    [Header("Focus Look Settings")]
-    [SerializeField] private float focusPitchOffset = 0f;
-    [SerializeField] private float focusLookLerp = 8f;
+    [Header("Follow Position Settings")]
+    [Tooltip("0 = 立即吸附（无延迟），>0 = Lerp 追赶速度")]
+    [SerializeField] private float positionFollowSpeed = 0f;
 
+    private Camera _camera;
+    public Camera Camera => _camera;
     private bool focusMode;
     private Transform focusTargetA;
     private Transform focusTargetB;
-    private float currentFocusZoom;   
+    private float currentFocusZoom;
+
+    public event System.Action OnPosChanaged;
+
+    private void Awake()
+    {
+        _camera = GetComponent<Camera>();
+        if (_camera == null)
+        {
+            Debug.LogError("ThirdPersonCamera requires a Camera component");
+        }
+    }
 
     private void LateUpdate()
     {
@@ -37,12 +50,11 @@ public class ThirdPersonCamera : MonoBehaviour, ICameraFocusController
         }
 
         var desiredPosition = target.position + offset;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        transform.position = positionFollowSpeed > 0f
+            ? Vector3.Lerp(transform.position, desiredPosition, positionFollowSpeed * Time.deltaTime)
+            : desiredPosition;
 
-        if (lookAtTarget)
-        {
-            ApplyPitchOnlyLookAt(target.position, followSpeed, 0f);
-        }
+        OnPosChanaged?.Invoke();
     }
 
     public void SetFollowTarget(Transform newTarget)
@@ -75,21 +87,10 @@ public class ThirdPersonCamera : MonoBehaviour, ICameraFocusController
 
         var midpoint = (focusTargetA.position + focusTargetB.position) * 0.5f;
         var desiredPosition = midpoint + focusOffset * currentFocusZoom;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        transform.position = positionFollowSpeed > 0f
+            ? Vector3.Lerp(transform.position, desiredPosition, positionFollowSpeed * Time.deltaTime)
+            : desiredPosition;
 
-        if (lookAtTarget)
-        {
-            ApplyPitchOnlyLookAt(midpoint, focusLookLerp, focusPitchOffset);
-        }
-    }
-
-    private void ApplyPitchOnlyLookAt(Vector3 targetPosition, float lerpSpeed, float pitchOffset)
-    {
-        var lookRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
-        var currentEuler = transform.rotation.eulerAngles;
-        var targetEuler = lookRotation.eulerAngles;
-
-        var newPitch = Mathf.LerpAngle(currentEuler.x, targetEuler.x + pitchOffset, lerpSpeed * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(newPitch, currentEuler.y, currentEuler.z);
+        OnPosChanaged?.Invoke();
     }
 }

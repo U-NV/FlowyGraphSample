@@ -1940,8 +1940,9 @@ MonoBehaviour:
   followSpeed: 5
   lookAtTarget: 1
   focusZoomMultiplier: 0.7
+  positionFollowSpeed: 0
   focusPitchOffset: -8
-  focusLookLerp: 100
+  focusLookLerp: 721.1
 --- !u!1 &637468869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5494301136797509767, guid: d4f5041a11399104d846504cc22da677, type: 3}
   iconRoot: {fileID: 871339688}
-  worldCamera: {fileID: 636863671}
+  worldCamera: {fileID: 636863673}
   playerTransform: {fileID: 755550004}
   interactionRadius: 2.5
   showIconRadius: 2.5
@@ -3026,7 +3027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1621822366986f745beaa7761b7f8984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introGraphAsset: {fileID: 0}
+  introGraphAsset: {fileID: 11400000, guid: b5762586f4500354d9e68b61d853b495, type: 2}
 --- !u!4 &1228471070
 Transform:
   m_ObjectHideFlags: 0

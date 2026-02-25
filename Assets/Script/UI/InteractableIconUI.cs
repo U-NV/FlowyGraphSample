@@ -8,7 +8,8 @@ public class InteractableIconUI : MonoBehaviour
     [SerializeField] private Vector3 worldOffset = new Vector3(0f, 2f, 0f);
     [SerializeField] private Button button;
     private InteractableObject target;
-    private Camera worldCamera;
+    private ThirdPersonCamera worldCamera;
+    private ThirdPersonCamera _listeningCamera;
     private bool canInteract;
     private bool isVisible;
 
@@ -21,12 +22,35 @@ public class InteractableIconUI : MonoBehaviour
         button.onClick.AddListener(OnClick);
     }
 
-    public void Init(InteractableObject newTarget, Camera newCamera)
+    private bool _isLisitingCameraPos = false;
+    private void OnEnable()
+    {
+        SubscribeCameraPos(worldCamera);
+    }
+
+    private void OnDisable()
+    {
+        UnsubscribeCameraPos();
+    }
+
+    private void OnCameraPosChanaged()
+    {
+        if (worldCamera == null)
+        {
+            return;
+        }
+        UpdateIconPosition();
+    }
+
+    public void Init(InteractableObject newTarget, ThirdPersonCamera newCamera)
     {
         target = newTarget;
         worldCamera = newCamera;
         canInteract = false;
         isVisible = false;
+
+        SubscribeCameraPos(worldCamera);
+        UpdateIconPosition();
     }
 
     public void SetState(bool isVisible, bool isInteractable)
@@ -42,32 +66,61 @@ public class InteractableIconUI : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
-        {
-            return;
-        }
-
         if (worldCamera == null)
         {
-            worldCamera = Camera.main;
+            worldCamera = GameObject.FindObjectOfType<ThirdPersonCamera>();
         }
 
-        if (worldCamera == null)
+        if (worldCamera != null && _listeningCamera != worldCamera)
         {
-            return;
+            SubscribeCameraPos(worldCamera);
         }
-
-        var screenPos = worldCamera.WorldToScreenPoint(target.InteractiveIconAnchor.position + worldOffset);
-        iconRect.position = screenPos;
-
 
         iconImage.gameObject.SetActive(isVisible);
-        
 
         if (button != null)
         {
             button.interactable = canInteract;
         }
+    }
+
+    private void UpdateIconPosition()
+    {
+        if (target == null || worldCamera == null)
+        {
+            return;
+        }
+
+        var screenPos = worldCamera.Camera.WorldToScreenPoint(target.InteractiveIconAnchor.position + worldOffset);
+        iconRect.position = screenPos;
+    }
+
+    private void SubscribeCameraPos(ThirdPersonCamera cameraToListen)
+    {
+        if (cameraToListen == null)
+        {
+            return;
+        }
+
+        if (_isLisitingCameraPos && _listeningCamera == cameraToListen)
+        {
+            return;
+        }
+
+        UnsubscribeCameraPos();
+        cameraToListen.OnPosChanaged += OnCameraPosChanaged;
+        _listeningCamera = cameraToListen;
+        _isLisitingCameraPos = true;
+    }
+
+    private void UnsubscribeCameraPos()
+    {
+        if (_listeningCamera != null)
+        {
+            _listeningCamera.OnPosChanaged -= OnCameraPosChanaged;
+        }
+        _listeningCamera = null;
+        _isLisitingCameraPos = false;
     }
 
     public void OnClick()

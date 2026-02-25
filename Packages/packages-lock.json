@@ -37,9 +37,12 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.addressables": "1.22.3",
+        "com.u0ugames.excel-data-parser": "https://github.com/U-NV/ExcelDataParser.git",
+        "com.u0ugames.excel-to-scriptableobject": "https://github.com/U-NV/ExcelToScriptableObject.git"
       },
-      "hash": "94782da1ef4878f37815e37bd990ba2a515a0e65"
+      "hash": "4b40e01f9529c09082fd8b925fca8357c7e33c19"
     },
     "com.unity.addressables": {
       "version": "1.22.3",

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: 
   _glossary: {fileID: 0}
-  _maxDynamicModuleCount: 0
   originalLanguageCodeIndex: 0
-  excelDataFolderRootPath: "Assets/FlowyGraphSample/Localization/\u539F\u59CB\u6587\u672C"
-  translateDataFolderRootPath: "Assets/FlowyGraphSample/Localization/\u7FFB\u8BD1\u6587\u672C"
+  excelDataFolderRootPath: "Assets/Localization/\u539F\u59CB\u6587\u672C"
+  translateDataFolderRootPath: "Assets/Localization/\u7FFB\u8BD1\u6587\u672C"
   languageDisplayDataList:
   - languageCode: zh-cn
     displayName: "\u7B80\u4F53\u4E2D\u6587"
@@ -24,7 +23,6 @@ MonoBehaviour:
     displayName: English
   - languageCode: ja
     displayName: "\u65E5\u672C\u8BED"
-  defaultModuleNames: []
   inGameLanguageCodeList:
   - zh-cn
   - en

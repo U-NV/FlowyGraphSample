@@ -5,7 +5,7 @@ public class InteractableIconManager : MonoBehaviour
 {
     [SerializeField] private InteractableIconUI iconPrefab;
     [SerializeField] private RectTransform iconRoot;
-    [SerializeField] private Camera worldCamera;
+    [SerializeField] private ThirdPersonCamera worldCamera;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float interactionRadius = 1.0f;
     [SerializeField] private float showIconRadius = 2.5f;
@@ -17,7 +17,7 @@ public class InteractableIconManager : MonoBehaviour
     {
         if (worldCamera == null)
         {
-            worldCamera = Camera.main;
+            worldCamera = GameObject.FindObjectOfType<ThirdPersonCamera>();
         }
         if (playerTransform == null)
         {
