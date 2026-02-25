@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c414faa0a0fd26049ba0465c466ee781, type: 3}
+  m_Name: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u79BB\u5F00\u89E6\u53D1"
+  m_EditorClassIdentifier: 
+  nextNodeId: 4
+  version: 1
+  _edgeDataList:
+  - edgeGuid: 1:0-3:0[ee83c811-58a5-4ab3-b36e-b2e435954db3]
+    outputNodeGuid: 1
+    outputPortIndex: 0
+    inputNodeGuid: 3
+    inputPortIndex: 0
+    connectionString: 1:0-3:0
+  - edgeGuid: 3:0-2:0[8d6c3475-d4ad-401d-aeb8-af74cd1fe136]
+    outputNodeGuid: 3
+    outputPortIndex: 0
+    inputNodeGuid: 2
+    inputPortIndex: 0
+    connectionString: 3:0-2:0
+  _stickyNoteDataList: []
+  _groupDataList: []
+  autoGenNodeDataModule:
+    AddStringValueNodeDataList:
+      list: []
+    BranchNodeDataList:
+      list: []
+    CheckFloatValueNodeDataList:
+      list: []
+    CheckStringValueNodeDataList:
+      list: []
+    CombineNodeDataList:
+      list: []
+    DelayNodeDataList:
+      list: []
+    EndNodeDataList:
+      list:
+      - NodeId: 2
+        Position: {x: 143.42859, y: 526.8571}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: "\u7ED3\u675F"
+        outputPortDataList: []
+    JumpInputNodeDataList:
+      list: []
+    JumpOutputNodeDataList:
+      list: []
+    LockNodeDataList:
+      list: []
+    OnlyPassOnceNodeDataList:
+      list: []
+    PassFirstOneNodeDataList:
+      list: []
+    PrintNodeDataList:
+      list: []
+    RandomDelayNodeDataList:
+      list: []
+    RemoveStringValueNodeDataList:
+      list: []
+    ResetBranchValueNodeDataList:
+      list: []
+    ResetFloatValueNodeDataList:
+      list: []
+    RunGraphNodeDataList:
+      list: []
+    AddItemNodeDataList:
+      list: []
+    CameraFocusCancelNodeDataList:
+      list: []
+    CameraFocusNodeDataList:
+      list: []
+    CharacterVisualStateNodeDataList:
+      list: []
+    CheckItemNodeDataList:
+      list: []
+    ChooseNodeDataList:
+      list: []
+    CustomLoopChooseNodeDataList:
+      list: []
+    DiceCheckNodeDataList:
+      list: []
+    MessageBubbleNodeDataList:
+      list:
+      - NodeId: 3
+        Position: {x: 143.42859, y: 377.7143}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: 
+        outputPortDataList:
+        - portName:
+            key: 
+            text: 
+        character: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+        message:
+          key: "\u7B2C\u4E00\u5929_\u8B66\u5BDF_\u8282\u70B9\u56FE_\u79BB\u5F00\u89E6\u53D1.3.0"
+          text: "\u52A0\u6CB9\uFF01"
+    MonologueNodeDataList:
+      list: []
+    RemoveItemNodeDataList:
+      list: []
+    SetCharacterNodeDataList:
+      list: []
+    SendSignalNodeDataList:
+      list: []
+    SetBranchValueNodeDataList:
+      list: []
+    SetFloatValueNodeDataList:
+      list: []
+    StartNodeDataList:
+      list:
+      - NodeId: 1
+        Position: {x: 143.42859, y: 289.7143}
+        inputPortDataList: []
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u5F00\u59CB"
+    TimerNodeDataList:
+      list: []
+    WaitAllOverNodeDataList:
+      list: []
+    WaitSignalNodeDataList:
+      list: []

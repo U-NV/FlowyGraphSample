@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Glossary
   m_EditorClassIdentifier: 
   glossaryDataList:
-  - keyword: Player
+  - keyword: '#Player#'
     data:
       lKey: Glossary.1
       lValue: "\u798F\u5C14\u6469\u65AF"

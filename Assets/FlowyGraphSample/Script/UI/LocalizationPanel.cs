@@ -15,11 +15,10 @@ public class LocalizationPanel : MonoBehaviour
         var configs = LocalizationManager.Config;
         foreach (var languageCode in configs.languageDisplayDataList)
         {
-            Debug.Log("languageCode: " + languageCode.languageCode);
             if(!configs.inGameLanguageCodeList.Contains(languageCode.languageCode))
             {
                 Debug.Log("not in inGameLanguageCodeList: " + languageCode.languageCode);
-                    continue;
+                continue;
             }
 
             var btn = Instantiate(btnPrefab, root.transform);

@@ -1178,6 +1178,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6187948348601699700, guid: 6eb82bb7a849afe44a11606ad2aa21e8, type: 3}
+      propertyPath: approachGraph
+      value: 
+      objectReference: {fileID: 11400000, guid: 38efd19ea059d0a42a0c28db51aab4bc, type: 2}
+    - target: {fileID: 6187948348601699700, guid: 6eb82bb7a849afe44a11606ad2aa21e8, type: 3}
       propertyPath: dialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 26c16fb23e802cd4fa5d17c04792343c, type: 2}
@@ -6516,6 +6520,14 @@ PrefabInstance:
       propertyPath: characterData
       value: 
       objectReference: {fileID: 11400000, guid: 13b464d4d86300641815812352d199c9, type: 2}
+    - target: {fileID: 6187948348601699700, guid: 6eb82bb7a849afe44a11606ad2aa21e8, type: 3}
+      propertyPath: leaveGraph
+      value: 
+      objectReference: {fileID: 11400000, guid: 25864b58382a4c3419972371233580aa, type: 2}
+    - target: {fileID: 6187948348601699700, guid: 6eb82bb7a849afe44a11606ad2aa21e8, type: 3}
+      propertyPath: approachGraph
+      value: 
+      objectReference: {fileID: 11400000, guid: acb6017883f8f864d815a82639752f63, type: 2}
     - target: {fileID: 6187948348601699700, guid: 6eb82bb7a849afe44a11606ad2aa21e8, type: 3}
       propertyPath: dialogueGraph
       value: 

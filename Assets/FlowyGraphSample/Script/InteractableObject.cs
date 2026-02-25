@@ -10,6 +10,8 @@ public class InteractableObject : MonoBehaviour
     [Header("Graphs")]
     [SerializeField] private FlowyGraphAsset dialogueGraph;
     [SerializeField] private FlowyGraphAsset idleGraph;
+    [SerializeField] private FlowyGraphAsset approachGraph;
+    [SerializeField] private FlowyGraphAsset leaveGraph;
     [SerializeField] private OptionsSelector<SignalOption> signalToEmit;
     [SerializeField] private bool isEnabled = true;
     [SerializeField] private bool allowRepeat = true;
@@ -124,6 +126,7 @@ public class InteractableObject : MonoBehaviour
             return;
         }
 
+        var wasSelected = isSelected;
         isInRange = inPlayerRange;
         isSelected = selected;
 
@@ -131,6 +134,24 @@ public class InteractableObject : MonoBehaviour
         {
             hasStateInitialized = true;
             TryPlayIdleIfNeeded();
+            return;
+        }
+
+        if (currentGraphType == GraphType.Interact)
+        {
+            return;
+        }
+
+        if (isSelected && !wasSelected)
+        {
+            TryPlayGraph(GraphType.Approach, approachGraph, true);
+        }
+        else if (!isSelected && wasSelected)
+        {
+            if (!TryPlayGraph(GraphType.Leave, leaveGraph, true))
+            {
+                TryPlayIdleIfNeeded();
+            }
         }
     }
 
@@ -141,17 +162,12 @@ public class InteractableObject : MonoBehaviour
             return false;
         }
 
-        if (!allowRepeatForType && HasPlayed(type))
+        if (type != GraphType.Interact && currentGraphType == GraphType.Interact)
         {
             return false;
         }
 
-        if (runtime != null && currentGraphType == type)
-        {
-            return false;
-        }
-
-        if (type == GraphType.Idle && currentGraphType != GraphType.None && currentGraphType != GraphType.Idle)
+        if (!allowRepeatForType && runtime != null && currentGraphType == type)
         {
             return false;
         }
