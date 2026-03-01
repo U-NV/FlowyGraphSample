@@ -1,4 +1,6 @@
+using System.Collections;
 using FlowyGraph;
+using U0UGames.Localization;
 using UnityEngine;
 
 public class FlowyGraphSampleManager : MonoBehaviour
@@ -18,8 +20,24 @@ public class FlowyGraphSampleManager : MonoBehaviour
             FlowyGraphBlackboard.ImportValuesFromJson("{}", true);
         }
 
+        if(LocalizationManager.IsDataLoaded)
+        {
+            StartIntroGraph();
+        }
+        else
+        {
+            LocalizationManager.OnDataLoadOver += OnLocalizationLoadOver;
+        }
+    }
 
+    private void OnLocalizationLoadOver()
+    {
+        LocalizationManager.OnDataLoadOver -= OnLocalizationLoadOver;
+        StartIntroGraph();
+    }
 
+    private void StartIntroGraph()
+    {
         introGraphRuntime = new FlowyGraphRuntime(introGraphAsset);
         introGraphRuntime.OnGraphOver += OnIntroGraphOver;
         introGraphRuntime.Start();

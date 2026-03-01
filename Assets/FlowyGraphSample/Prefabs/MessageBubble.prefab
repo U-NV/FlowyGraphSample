@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2031310710746284582}
   - component: {fileID: 4830135027143009082}
   - component: {fileID: 6304057222485594591}
-  - component: {fileID: 4842820056672997685}
+  - component: {fileID: 8632348745023603152}
+  - component: {fileID: 281424420294153755}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123123123123123123123123123123
+  m_text: 123123123123
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5d212fe58fb6d240b19f4a3f8ae41fc, type: 2}
   m_sharedMaterial: {fileID: 9216446693579794563, guid: d5d212fe58fb6d240b19f4a3f8ae41fc, type: 2}
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4842820056672997685
+--- !u!114 &8632348745023603152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,13 +145,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255814090467469203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00dda02d00b79a54cb8e1faea21aa069, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bd7102b308040b08f3d2baa475c0b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 6304057222485594591}
-  localizeData:
-    lKey: 
-    lValue: 
+  _text: {fileID: 6304057222485594591}
+  effectsConfig: {fileID: 11400000, guid: c3bf2491e54c7fe4fb18c64bba5ac726, type: 2}
+--- !u!114 &281424420294153755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255814090467469203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2786a0004b0c6ac4bac60ccc74bd1265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 1e00cc2f7885f6d4da9a073db317f464, type: 2}
+  textComponent: {fileID: 6304057222485594591}
+  tagParser: {fileID: 8632348745023603152}
 --- !u!1 &1551396362999120389
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368c68e80cc53804da89228555350313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageText: {fileID: 4842820056672997685}
+  typewriteAnimController: {fileID: 281424420294153755}
   worldOffset: {x: 0, y: 0.2, z: 0}
   messageAnchor: {fileID: 0}
   secondsPerChar: 0.1

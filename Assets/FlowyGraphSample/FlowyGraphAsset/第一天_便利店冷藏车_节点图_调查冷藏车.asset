@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c414faa0a0fd26049ba0465c466ee781, type: 3}
   m_Name: "\u7B2C\u4E00\u5929_\u4FBF\u5229\u5E97\u51B7\u85CF\u8F66_\u8282\u70B9\u56FE_\u8C03\u67E5\u51B7\u85CF\u8F66"
   m_EditorClassIdentifier: 
-  nextNodeId: 99
+  nextNodeId: 102
   version: 1
   _edgeDataList:
   - edgeGuid: 1:0-52:0[084ff63a-4eff-40ae-88f5-07f2b4b3524e]
@@ -183,24 +183,6 @@ MonoBehaviour:
     inputNodeGuid: 59
     inputPortIndex: 0
     connectionString: 93:0-59:0
-  - edgeGuid: 71:0-94:0[d253e4a9-1833-4eea-acdd-b7b621147bda]
-    outputNodeGuid: 71
-    outputPortIndex: 0
-    inputNodeGuid: 94
-    inputPortIndex: 0
-    connectionString: 71:0-94:0
-  - edgeGuid: 82:0-96:0[1d7de3d0-21d4-473f-92a5-aa9a49b0a4e3]
-    outputNodeGuid: 82
-    outputPortIndex: 0
-    inputNodeGuid: 96
-    inputPortIndex: 0
-    connectionString: 82:0-96:0
-  - edgeGuid: 98:0-95:1[7b68c7b0-58f9-4505-974e-fd30398f5d1a]
-    outputNodeGuid: 98
-    outputPortIndex: 0
-    inputNodeGuid: 95
-    inputPortIndex: 1
-    connectionString: 98:0-95:1
   - edgeGuid: 95:1-55:0[bd060f31-8e43-4151-a93e-d5484db90fb3]
     outputNodeGuid: 95
     outputPortIndex: 1
@@ -237,6 +219,24 @@ MonoBehaviour:
     inputNodeGuid: 95
     inputPortIndex: 0
     connectionString: 91:1-95:0
+  - edgeGuid: 71:0-99:0[b0e599bb-f6a0-4022-a7ee-840a318d46fd]
+    outputNodeGuid: 71
+    outputPortIndex: 0
+    inputNodeGuid: 99
+    inputPortIndex: 0
+    connectionString: 71:0-99:0
+  - edgeGuid: 82:0-100:0[33c07876-448c-4e6f-8269-06866237d612]
+    outputNodeGuid: 82
+    outputPortIndex: 0
+    inputNodeGuid: 100
+    inputPortIndex: 0
+    connectionString: 82:0-100:0
+  - edgeGuid: 101:0-95:1[260ccb91-d504-4fca-aa40-a5f51a6d243b]
+    outputNodeGuid: 101
+    outputPortIndex: 0
+    inputNodeGuid: 95
+    inputPortIndex: 1
+    connectionString: 101:0-95:1
   _stickyNoteDataList: []
   _groupDataList: []
   autoGenNodeDataModule:
@@ -262,9 +262,33 @@ MonoBehaviour:
             text: End
         outputPortDataList: []
     JumpInputNodeDataList:
-      list: []
+      list:
+      - NodeId: 99
+        Position: {x: 2430, y: 1827.5}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: "\u8F93\u5165"
+        outputPortDataList: []
+        channel: 0
+      - NodeId: 100
+        Position: {x: 3517, y: 1996.5}
+        inputPortDataList:
+        - portName:
+            key: 
+            text: "\u8F93\u5165"
+        outputPortDataList: []
+        channel: 0
     JumpOutputNodeDataList:
-      list: []
+      list:
+      - NodeId: 101
+        Position: {x: 32, y: 1924.5}
+        inputPortDataList: []
+        outputPortDataList:
+        - portName:
+            key: 
+            text: "\u8F93\u51FA"
+        channel: 0
     LockNodeDataList:
       list: []
     OnlyPassOnceNodeDataList:
@@ -720,6 +744,8 @@ MonoBehaviour:
     SetCharacterNodeDataList:
       list: []
     SendSignalNodeDataList:
+      list: []
+    SequentialPassNodeDataList:
       list: []
     SetBranchValueNodeDataList:
       list: []

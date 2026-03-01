@@ -17,7 +17,7 @@
 
 有关该项目的详细说明、快速上手指南及 API 参考，请访问网页版文档：
 
-👉 **[FlowyGraph 官方文档](https://u-nv.github.io/FlowyGraphDoc/)**
+👉 **[FlowyGraph 官方文档](https://u0ugames.fun/flowy-graph-docs/)**
 
 
 # 示例项目详解 (FlowyGraphSample)

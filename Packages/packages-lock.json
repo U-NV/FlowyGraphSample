@@ -30,7 +30,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "9600530d5aae204a85c2acb7154683c587217d11"
+      "hash": "2bffced98ea3555eb6edd68adf07e50d863c252e"
     },
     "com.u0ugames.localization": {
       "version": "https://github.com/U-NV/Localization.git",
@@ -42,7 +42,7 @@
         "com.u0ugames.excel-data-parser": "https://github.com/U-NV/ExcelDataParser.git",
         "com.u0ugames.excel-to-scriptableobject": "https://github.com/U-NV/ExcelToScriptableObject.git"
       },
-      "hash": "0e3b0bca8e3d7af57013b693229d5d0ca64aafee"
+      "hash": "d0ca27283884b5f9b931e0dedb717310f96752e4"
     },
     "com.unity.addressables": {
       "version": "1.22.3",

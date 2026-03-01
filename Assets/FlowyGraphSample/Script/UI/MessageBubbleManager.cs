@@ -12,14 +12,10 @@ public class MessageBubbleManager : MonoBehaviour
 
     private void Awake()
     {
-    }
-
-    private void OnEnable()
-    {
         FlowyGraphBlackboard.RegisterClass(this);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         FlowyGraphBlackboard.UnregisterClass(this);
     }
@@ -103,7 +99,7 @@ public class MessageBubbleManager : MonoBehaviour
 
         if (bubble != null)
         {
-            bubble.StopAutoHide();
+            bubble.StopMessageHide();
             Destroy(bubble.gameObject);
         }
 

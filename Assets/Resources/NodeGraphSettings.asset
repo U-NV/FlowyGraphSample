@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c684616a429bd4fbe8e06b37b32887, type: 3}
   m_Name: NodeGraphSettings
   m_EditorClassIdentifier: 
-  nodeDataExportPath: Assets/FlowyGraphSample/Localization
-  autoGenNodeModuleFolder: Assets/FlowyGraphSample/Script
+  nodeDataExportPath: "Assets/Localization/\u539F\u59CB\u6587\u672C"
   nodeColors:
   - groupName: Start
     backgroundColor: {r: 0.078431375, g: 0.6039216, b: 0.24313726, a: 1}

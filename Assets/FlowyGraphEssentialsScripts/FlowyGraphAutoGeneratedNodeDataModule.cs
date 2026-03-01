@@ -40,6 +40,7 @@ namespace FlowyGraph
         [SerializeField] public NodeDataList<global::FlowyGraph.Sample.RemoveItemNodeData> RemoveItemNodeDataList;
         [SerializeField] public NodeDataList<global::FlowyGraph.Sample.SetCharacterNodeData> SetCharacterNodeDataList;
         [SerializeField] public NodeDataList<global::FlowyGraph.SendSignalNodeData> SendSignalNodeDataList;
+        [SerializeField] public NodeDataList<global::FlowyGraph.SequentialPassNodeData> SequentialPassNodeDataList;
         [SerializeField] public NodeDataList<global::FlowyGraph.SetBranchValueNodeData> SetBranchValueNodeDataList;
         [SerializeField] public NodeDataList<global::FlowyGraph.SetFloatValueNodeData> SetFloatValueNodeDataList;
         [SerializeField] public NodeDataList<global::FlowyGraph.StartNodeData> StartNodeDataList;

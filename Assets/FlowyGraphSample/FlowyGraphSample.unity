@@ -287,8 +287,8 @@ MonoBehaviour:
     lValue: "<size=150%><b>[ {0} ]</b></size>\n D{1}: {0} + \u5C5E\u6027: {2} = {3}"
   rollResultData:
     lKey: UI.Dice.RollResult
-    lValue: "<size=150%><b>[ {0} ]</b></size>\\n <b>{0}</b> + <b>{1}</b> = <b>{2}</b> 
-      \\n(\u96BE\u5EA6 {3}) \\n<size=120%><color={4}><b>\u2014 {5} \u2014</b></color></size>"
+    lValue: "<size=150%><b>[ {0} ]</b></size> <b>{0}</b> + <b>{1}</b> = <b>{2}</b>
+      (\u96BE\u5EA6 {3}) <size=120%><color={4}><b>\u2014 {5} \u2014</b></color></size>"
   successString:
     lKey: UI.Common.Success
     lValue: "\u6210\u529F"
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   bgButton: {fileID: 1032565876}
   characterNameText: {fileID: 1743353146}
   characterNameRoot: {fileID: 579464718}
-  contentText: {fileID: 593150449}
+  typewriteAnimController: {fileID: 593150449}
   closeDelay: 0.02
 --- !u!1 &579464718
 GameObject:
@@ -1658,6 +1658,7 @@ GameObject:
   - component: {fileID: 593150446}
   - component: {fileID: 593150448}
   - component: {fileID: 593150447}
+  - component: {fileID: 593150450}
   - component: {fileID: 593150449}
   m_Layer: 5
   m_Name: MessageText
@@ -1739,7 +1740,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1791,13 +1792,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 593150445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00dda02d00b79a54cb8e1faea21aa069, type: 3}
+  m_Script: {fileID: 11500000, guid: 2786a0004b0c6ac4bac60ccc74bd1265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 593150447}
-  localizeData:
-    lKey: 
-    lValue: 
+  config: {fileID: 11400000, guid: 1e00cc2f7885f6d4da9a073db317f464, type: 2}
+  textComponent: {fileID: 593150447}
+  tagParser: {fileID: 593150450}
+--- !u!114 &593150450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593150445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd7102b308040b08f3d2baa475c0b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 593150447}
+  effectsConfig: {fileID: 11400000, guid: c3bf2491e54c7fe4fb18c64bba5ac726, type: 2}
 --- !u!1 &613835257
 GameObject:
   m_ObjectHideFlags: 0

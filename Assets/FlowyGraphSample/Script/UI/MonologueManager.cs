@@ -5,6 +5,7 @@ using System;
 using UnityEngine.UI;
 using U0UGames.Localization;
 using U0UGames.Localization.UI;
+using SubSystems.AllScenes.UI;
 
 public class MonologueManager : MonoBehaviour
 {
@@ -14,8 +15,7 @@ public class MonologueManager : MonoBehaviour
     [SerializeField] private LocalizeText characterNameText;
     [SerializeField] private GameObject characterNameRoot;
 
-
-    [SerializeField] private LocalizeText contentText;
+    [SerializeField] private TypewriteAnimController typewriteAnimController;
 
     [SerializeField] private float closeDelay = 0.02f;
 
@@ -53,11 +53,17 @@ public class MonologueManager : MonoBehaviour
 
         onNextCallback = onNext;
         monologuePanel.SetActive(true);
-        contentText.text = content;
+        typewriteAnimController.ShowText(content.Value);
     }
 
     public void OnClickNext()
     {
+        if (typewriteAnimController.IsPlaying)
+        {
+            typewriteAnimController.Complete();
+            return;
+        }
+
         if (onNextCallback != null)
         {
             var callback = onNextCallback;

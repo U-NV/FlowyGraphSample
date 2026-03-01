@@ -250,6 +250,8 @@ MonoBehaviour:
       list: []
     SendSignalNodeDataList:
       list: []
+    SequentialPassNodeDataList:
+      list: []
     SetBranchValueNodeDataList:
       list: []
     SetFloatValueNodeDataList:
