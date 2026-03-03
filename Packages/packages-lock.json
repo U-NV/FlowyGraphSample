@@ -30,7 +30,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2bffced98ea3555eb6edd68adf07e50d863c252e"
+      "hash": "6ff8526e9a767966865b67629afc207b97f0690c"
     },
     "com.u0ugames.localization": {
       "version": "https://github.com/U-NV/Localization.git",
@@ -42,7 +42,7 @@
         "com.u0ugames.excel-data-parser": "https://github.com/U-NV/ExcelDataParser.git",
         "com.u0ugames.excel-to-scriptableobject": "https://github.com/U-NV/ExcelToScriptableObject.git"
       },
-      "hash": "d0ca27283884b5f9b931e0dedb717310f96752e4"
+      "hash": "f42935814ec95ef42e8329809c07647ed585c84c"
     },
     "com.unity.addressables": {
       "version": "1.22.3",
@@ -205,16 +205,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.visualscripting": {
-      "version": "1.9.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
