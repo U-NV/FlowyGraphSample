@@ -35,6 +35,7 @@
   "UI.SavePanel.Save": "Save",
   "UI.SavePanel.Load": "Load",
   "UI.SavePanel.Reset": "Reset",
+  "UI.SavePanel.Quit": "Exit",
   "UI.Dice.DetailText": "Difficulty: <b>{0}</b>    Attribute Bonus: <b>+{1}</b>",
   "UI.Dice.RollAnim": "<size=150%><b>[ {0} ]</b></size>\n D{1}: {0} + Attribute: {2} = {3}",
   "UI.Dice.RollResult": "<size=150%><b>[ {0} ]</b></size>\n <b>{0}</b> + <b>{1}</b> = <b>{2}</b>  \n(Difficulty {3}) \n<size=120%><color={4}><b>— {5} —</b></color></size>",

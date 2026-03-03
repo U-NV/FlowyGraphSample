@@ -6,6 +6,7 @@ public class SaveAndLoadPanel : MonoBehaviour
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button resetButton;
+    [SerializeField] private Button quitGameButton;
     [SerializeField] private SaveLoadManager saveLoadManager;
 
     private void Awake()
@@ -29,6 +30,11 @@ public class SaveAndLoadPanel : MonoBehaviour
         {
             resetButton.onClick.AddListener(HandleReset);
         }
+
+        if (quitGameButton != null)
+        {
+            quitGameButton.onClick.AddListener(HandleQuitGame);
+        }
     }
 
     private void OnDestroy()
@@ -46,6 +52,11 @@ public class SaveAndLoadPanel : MonoBehaviour
         if (resetButton != null)
         {
             resetButton.onClick.RemoveListener(HandleReset);
+        }
+
+        if (quitGameButton != null)
+        {
+            quitGameButton.onClick.RemoveListener(HandleQuitGame);
         }
     }
 
@@ -71,5 +82,10 @@ public class SaveAndLoadPanel : MonoBehaviour
         {
             saveLoadManager.ResetGame();
         }
+    }
+
+    private void HandleQuitGame()
+    {
+        Application.Quit();
     }
 }

@@ -19,12 +19,16 @@ MonoBehaviour:
   languageDisplayDataList:
   - languageCode: zh-CN
     displayName: "\u4E2D\u6587"
+    textAnimSpeed: 1
   - languageCode: en
     displayName: English
+    textAnimSpeed: 1
   - languageCode: ja
     displayName: "\u65E5\u672C\u8A9E"
+    textAnimSpeed: 1
   - languageCode: zh-CHT
     displayName: "\u7E41\u4F53\u4E2D\u6587"
+    textAnimSpeed: 1
   inGameLanguageCodeList:
   - en
   - ja
@@ -63,7 +67,6 @@ MonoBehaviour:
     toCode: en
   - fromCode: en-CA
     toCode: en
-  translateApiKey: sk-c84f04e6072f424691131c872d3c954c
   translateApiUrl: https://api.deepseek.com
   translateAIPrompt: 
   saveExportDiffFile: 0

@@ -35,6 +35,7 @@
   "UI.SavePanel.Save": "保存",
   "UI.SavePanel.Load": "読み込み",
   "UI.SavePanel.Reset": "リセット",
+  "UI.SavePanel.Quit": "終了",
   "UI.Dice.DetailText": "難易度: <b>{0}</b>    属性ボーナス: <b>+{1}</b>",
   "UI.Dice.RollAnim": "<size=150%><b>[ {0} ]</b></size>\n D{1}: {0} + 属性: {2} = {3}",
   "UI.Dice.RollResult": "<size=150%><b>[ {0} ]</b></size>\n <b>{0}</b> + <b>{1}</b> = <b>{2}</b>  \n(難易度 {3}) \n<size=120%><color={4}><b>— {5} —</b></color></size>",
